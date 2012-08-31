@@ -3,7 +3,7 @@
 ## Petitions
 
 * [`GET petitions`](#get-petitions)
-* [`GET petitions/:petition_id`](#get-petitions_petition_id)
+* [`GET petitions/:petition_id`](#get-petitions-petition_id)
 * [`GET petitions/get_id`](#get-petitions-get_id)
 
 <a name="get-petitions"></a>
@@ -155,7 +155,10 @@ petition target, URL to the petition image (if available), and signature count.
         </tr>
         <tr>
             <td><code>targets</code></td>
-            <td>The list of targets. (See <em>Targets on Petitions</em>.)</td>
+            <td>
+                The list of targets. (See <em>
+                <a href="petitions/targets.md">Targets on Petitions</a></em>.)
+            </td>
         </tr>
         <tr>
             <td><code>letter</code></td>

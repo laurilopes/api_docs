@@ -8,13 +8,13 @@
     * Endpoint
     * Request Signature
 * [Responses](responses.md)
-  * Response Codes
-  * Response Format
+    * Response Codes
+    * Response Format
 * [Authentication](authentication.md)
     * API Key
     * API Secret Token
     * Petition Authorization Key
-* [Resources](resouces.md)
+* [Resources](resources.md)
     * [Petitions](resources/petitions.md)
         * [Targets on Petitions](resources/petitions/targets.md)
         * [Signatures on Petitions](resources/petitions/signatures.md)

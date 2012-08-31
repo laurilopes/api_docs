@@ -167,7 +167,7 @@ Example:
         }
 
 <a name="get-signatures-recent"></a>
-### [`GET petitions/:petition_id/signatures/recent`]
+### `GET petitions/:petition_id/signatures/recent`
 
 Returns a maximum of the 10 most recent signatures on a petition. This is an
 alias for
@@ -231,8 +231,8 @@ terms of service and privacy policy.
             <td><code>source</code></td>
             <td>
                 The source code originally submitted to request the 
-                authorization key. (See <em>Authorization Keys on 
-                Petitions</em>.)
+                authorization key. (See <em><a href="auth_keys.md">Authorization
+                Keys on Petitions</a></em>.)
             </td>
         </tr>
         <tr>
@@ -312,7 +312,7 @@ terms of service and privacy policy.
 If the request is successful, the response will have an HTTP status code of 202
 and a brief successful result message. If it is not successful for whatever
 reason, the status code will vary depending on the circumstance. See 
-_Response Codes_.
+[_Response Codes_](../../responses.md).
 
 <table>
     <thead>
