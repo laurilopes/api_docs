@@ -24,5 +24,5 @@ petition authorization key is specific to a petition, a source, and an API user.
 The parameter name is `auth_key`.
 
 Partners wishing to obtain a petition authorization key on behalf of an
-individual may do so through an authorization key API request. See 
+individual may do so through an authorization key API request. See
 [_Authorization Keys on Petitions_](resources/petitions/auth_keys.md).

@@ -1,6 +1,6 @@
 # Responses
 
-Depending on its type, a request is either processed immediately or queued for 
+Depending on its type, a request is either processed immediately or queued for
 processing later. Generally, requests that are seeking information will get an
 immediate response; requests that are modifying or adding data will be queued
 for later.
@@ -18,7 +18,7 @@ The following HTTP status codes are possible in response to a request:
         <tr>
             <td>200</td>
             <td>OK (Immediate response)</td>
-            <td>The request was a success and the response includes the 
+            <td>The request was a success and the response includes the
                 requested data.</td>
         </tr>
         <tr>
@@ -64,7 +64,7 @@ The following HTTP status codes are possible in response to a request:
         <tr>
             <td>500</td>
             <td>Internal Server Error</td>
-            <td>The request could not be fulfilled due to an unexpected 
+            <td>The request could not be fulfilled due to an unexpected
                 error.</td>
         </tr>
         <tr>
@@ -84,13 +84,13 @@ Here is an example request to retrieve the most recent signature of a petition:
 
     GET https://api.change.org/v1/petitions/48503/signatures?page_size=1
     => [{ 
-            "first_name": "Jean-Luc", 
-            "last_name": "Picard", 
-            "city": "San Francisco", 
-            "state_province": "CA", 
-            "country": "US", 
-            "signed_on": "2012-02-15 23:39:31 UTC" 
+            "first_name": "Jean-Luc",
+            "last_name": "Picard",
+            "city": "San Francisco",
+            "state_province": "CA",
+            "country": "US",
+            "signed_on": "2012-02-15 23:39:31 UTC"
         }]
 
-Note: Authentication and validation clear-text parameters (public API key, 
+Note: Authentication and validation clear-text parameters (public API key,
 request signature, and timestamp) were omitted from the request above.

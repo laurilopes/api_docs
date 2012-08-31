@@ -11,11 +11,13 @@ Returns the reasons given by signers of a petition for having signed.
 <table>
     <thead>
         <th>Parameter Name</th>
+        <th>Type</th>
         <th>Description</th>
     </thead>
     <tbody>
         <tr>
             <td><code>petition_id</code></td>
+            <td><code>int</code></td>
             <td>
                 <em>(In URL)</em> The petition from which reasons should be
                 retrieved.
@@ -23,6 +25,7 @@ Returns the reasons given by signers of a petition for having signed.
         </tr>
         <tr>
             <td><code>page_size</code></td>
+            <td><code>int</code></td>
             <td>
                 <em>(Optional)</em>The maximum number of reasons to return per 
                 request, but no more than 100. Returns a maximum of 10 reasons 
@@ -31,6 +34,7 @@ Returns the reasons given by signers of a petition for having signed.
         </tr>
         <tr>
             <td><code>page</code></td>
+            <td><code>int</code></td>
             <td>
                 <em>(Optional)</em>The page offset by <code>page_size</code> 
                 reasons. Returns the first page by default if omitted.
@@ -38,6 +42,7 @@ Returns the reasons given by signers of a petition for having signed.
         </tr>
         <tr>
             <td><code>sort</code></td>
+            <td><code>string</code></td>
             <td>
                 <em>(Optional)</em>The order by which reasons will be returned. 
                 Accepted values are <code>popularity</code>, 
@@ -56,41 +61,48 @@ An array of reasons for signing the petition.
 <table>
     <thead>
         <th>Field Name</th>
+        <th>Type</th>
         <th>Description</th>
     </thead>
     <tbody>
         <tr>
             <td><code>created_on</code></td>
+            <td><code>string</code> of ISO-8601 datetime</td>
             <td>
                 The date and time when this reason was posted to the petition.
             </td>
         </tr>
         <tr>
             <td><code>content</code></td>
+            <td><code>string</code></td>
             <td>
                 The content of the reason for signing.
             </td>
         </tr>
         <tr>
             <td><code>like_count</code></td>
+            <td><code>int</code></td>
             <td>
                 The number of users who have liked this reason.
             </td>
         </tr>
         <tr>
             <td><code>author_name</code></td>
+            <td><code>string</code></td>
             <td>
                 The name of the author of the reason.
             </td>
         </tr>
         <tr>
             <td><code>author_url</code></td>
+            <td><code>string</code></td>
             <td>
                 The URL to the Change.org profile page of the reason author.
             </td>
         </tr>
         <tr>
             <td><code>flag_endpoint</code></td>
+            <td><code>string</code></td>
             <td>
                 The URL to send a <code>PUT</code> request to if this reason 
                 should be removed for inappropriate content. The body of the

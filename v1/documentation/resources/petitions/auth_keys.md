@@ -15,11 +15,13 @@ would most often be a reasonable source code (e.g. a specific YouTube video).
 <table>
     <thead>
         <th>Parameter Name</th>
+        <th>Type</th>
         <th>Description</th>
     </thead>
     <tbody>
         <tr>
             <td><code>petition_id</code></td>
+            <td><code>int</code></td>
             <td>
                 <em>(In URL)</em> The petition from which updates should be 
                 retrieved.
@@ -27,6 +29,7 @@ would most often be a reasonable source code (e.g. a specific YouTube video).
         </tr>
         <tr>
             <td><code>source_description</code></td>
+            <td><code>string</code></td>
             <td>
                 User defined. The type of media around which signatures will be 
                 gathered. Example: <code>"YouTube video"</code>
@@ -34,6 +37,7 @@ would most often be a reasonable source code (e.g. a specific YouTube video).
         </tr>
         <tr>
             <td><code>source</code></td>
+            <td><code>string</code></td>
             <td>
                 URL or other identifier of the source from which signatures will
                 be gathered. Must be unique to the API consumer submitting the 
@@ -43,6 +47,7 @@ would most often be a reasonable source code (e.g. a specific YouTube video).
         </tr>
         <tr>
             <td><code>requester_email</code></td>
+            <td><code>string</code></td>
             <td>
                 The email address of the individual requesting the petition 
                 authorization key.
@@ -50,6 +55,7 @@ would most often be a reasonable source code (e.g. a specific YouTube video).
         </tr>
         <tr>
             <td><code>callback_endpoint</code></td>
+            <td><code>string</code></td>
             <td>
                 The URL to which the petition authorization key or other 
                 information (outlined below) will be posted.
@@ -60,53 +66,59 @@ would most often be a reasonable source code (e.g. a specific YouTube video).
 
 #### Response Data
 
-A 202 acknowledgement response is sent upon receipt of the request if no 
-petition authorization key already exists for this resource and requestor. If it 
-does, then a 200 response is sent with the authorization code that already 
-exists or an indication that the request has been denied or that a 
-previously-granted authorization code has been revoked. 
+A 202 acknowledgement response is sent upon receipt of the request if no
+petition authorization key already exists for this resource and requestor. If it
+does, then a 200 response is sent with the authorization code that already
+exists or an indication that the request has been denied or that a
+previously-granted authorization code has been revoked.
 
-The following is the data sent to the callback endpoint once the request has 
-been processed. The originally fields submitted are posted to the callback 
-endpoint to enable the user submitting the request to map the authorization back 
+The following is the data sent to the callback endpoint once the request has
+been processed. The originally fields submitted are posted to the callback
+endpoint to enable the user submitting the request to map the authorization back
 to its own user and resource (originally specified in `source`).
 
 <table>
     <thead>
         <th>Field Name</th>
+        <th>Type</th>
         <th>Description</th>
     </thead>
     <tbody>
         <tr>
             <td><code>status</code></td>
+            <td><code>string</code></td>
             <td>
-                Whether or not the authorization key was granted. Possible 
-                values are <code>granted</code>, <code>denied</code>, or 
+                Whether or not the authorization key was granted. Possible
+                values are <code>granted</code>, <code>denied</code>, or
                 <code>revoked</code>.
             </td>
         </tr>
         <tr>
             <td><code>petition_id</code></td>
+            <td><code>int</code></td>
             <td>
-                The ID of the petition on which an authorization key was 
+                The ID of the petition on which an authorization key was
                 requested.
             </td>
         </tr>
         <tr>
             <td><code>source_description</code></td>
+            <td><code>string</code></td>
             <td>
-                The <code>source_description</code> originally submitted with 
+                The <code>source_description</code> originally submitted with
                 this request.
             </td>
         </tr>
         <tr>
             <td><code>source</code></td>
+            <td><code>string</code></td>
             <td>
                 The <code>source</code> originally submitted with this request.
             </td>
         </tr>
         <tr>
             <td><code>requester_email</code></td>
+            <td><code>string</code></td>
             <td>
                 The <code>requester_email</code> originally submitted with this
                 request.
@@ -114,6 +126,7 @@ to its own user and resource (originally specified in `source`).
         </tr>
         <tr>
             <td><code>auth_key</code></td>
+            <td><code>string</code></td>
             <td>
                 <em>(If granted or revoked)</em> The petition authorization key.
             </td>
@@ -131,7 +144,7 @@ Example:
         "callback_endpoint": "http://mywebsite.com/receive_auth_keys"
     }
 
-Results in a 202 acknowledgment response. Eventually, the callback endpoint 
+Results in a 202 acknowledgment response. Eventually, the callback endpoint
 would receive this request:
 
     POST http://mywebsite.com/receive_auth_keys

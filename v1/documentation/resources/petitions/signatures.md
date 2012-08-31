@@ -15,18 +15,21 @@ Returns signatures on a petition.
 <table>
     <thead>
         <th>Parameter Name</th>
+        <th>Type</th>
         <th>Description</th>
     </thead>
     <tbody>
         <tr>
             <td><code>petition_id</code></td>
+            <td><code>int</code></td>
             <td>
-                <em>(In URL)</em> The petition from which the targets should 
+                <em>(In URL)</em> The petition from which the targets should
                 be retrieved.
             </td>
         </tr>
         <tr>
             <td><code>page_size</code></td>
+            <td><code>int</code></td>
             <td>
                 <em>(Optional)</em> The maximum number of signatures to return
                 per request, but no more than 100. Returns a maximum of 10
@@ -35,6 +38,7 @@ Returns signatures on a petition.
         </tr>
         <tr>
             <td><code>page</code></td>
+            <td><code>int</code></td>
             <td>
                 <em>(Optional)</em> The page offset by <code>page_size</code>
                 signatures. Returns the first page by default if omitted.
@@ -42,10 +46,11 @@ Returns signatures on a petition.
         </tr>
         <tr>
             <td><code>sort</code></td>
+            <td><code>string</code></td>
             <td>
                 <em>(Optional)</em> The order by which signatures will be
                 returned. Accepted values are <code>time_asc</code> and 
-                <code>time_desc</code>. Defaults to <code>time_asc</code> 
+                <code>time_desc</code>. Defaults to <code>time_asc</code>
                 if omitted.
             </td>
         </tr>
@@ -60,17 +65,20 @@ offset by the `page` number given.
 <table>
     <thead>
         <th>Field Name</th>
+        <th>Type</th>
         <th>Description</th>
     </thead>
     <tbody>
         <tr>
             <td><code>signature_count</code></td>
+            <td><code>int</code></td>
             <td>
                 The number of total signatures on this petition.
             </td>
         </tr>
         <tr>
             <td><code>prev_page_endpoint</code></td>
+            <td><code>string</code></td>
             <td>
                 The API endpoint that can be called to retrieve the previous
                 page of signatures. null if there is no previous page.
@@ -78,6 +86,7 @@ offset by the `page` number given.
         </tr>
         <tr>
             <td><code>next_page_endpoint</code></td>
+            <td><code>string</code></td>
             <td>
                 The API endpoint that can be called to retrieve the next page
                 of signatures. null if there is no next page.
@@ -85,6 +94,7 @@ offset by the `page` number given.
         </tr>
         <tr>
             <td><code>total_pages</code></td>
+            <td><code>int</code></td>
             <td>
                 The total number of pages of signatures (of size specified by
                 <code>page_size</code>)
@@ -92,6 +102,7 @@ offset by the `page` number given.
         </tr>
         <tr>
             <td><code>signatures</code></td>
+            <td><code>array</code></td>
             <td>
                 The array of signatures.
             </td>
@@ -104,35 +115,41 @@ The signatures array contains objects with the following data:
 <table>
     <thead>
         <th>Field Name</th>
+        <th>Type</th>
         <th>Description</th>
     </thead>
     <tbody>
         <tr>
             <td><code>name</code></td>
+            <td><code>string</code></td>
             <td>
                 Full display name of the signer.
             </td>
         </tr>
         <tr>
             <td><code>city</code></td>
+            <td><code>string</code></td>
             <td>
                 Residential city of the signer.
             </td>
         </tr>
         <tr>
             <td><code>state_province</code></td>
+            <td><code>string</code></td>
             <td>
                 <em>(If available)</em> State or province of the signer.
             </td>
         </tr>
         <tr>
             <td><code>country</code></td>
+            <td><code>string</code></td>
             <td>
                 Full country name of the signer.
             </td>
         </tr>
         <tr>
             <td><code>signed_on</code></td>
+            <td><code>string</code> of ISO-8601 datetime</td>
             <td>
                 Date and time of the signature.
             </td>
@@ -179,11 +196,13 @@ alias for
 <table>
     <thead>
         <th>Parameter Name</th>
+        <th>Type</th>
         <th>Description</th>
     </thead>
     <tbody>
         <tr>
             <td><code>petition_id</code></td>
+            <td><code>int</code></td>
             <td>
                 <em>(In URL)</em> The petition from which signatures should be
                 retrieved.
@@ -210,11 +229,13 @@ terms of service and privacy policy.
 <table>
     <thead>
         <th>Parameter Name</th>
+        <th>Type</th>
         <th>Description</th>
     </thead>
     <tbody>
         <tr>
             <td><code>petition_id</code></td>
+            <td><code>int</code></td>
             <td>
                 <em>(In URL)</em> The petition to which a new signature should
                 be added.
@@ -222,6 +243,7 @@ terms of service and privacy policy.
         </tr>
         <tr>
             <td><code>auth_key</code></td>
+            <td><code>string</code></td>
             <td>
                 <em>(In request signature only)</em> The petition authorization
                 key.
@@ -229,74 +251,86 @@ terms of service and privacy policy.
         </tr>
         <tr>
             <td><code>source</code></td>
+            <td><code>string</code></td>
             <td>
-                The source code originally submitted to request the 
+                The source code originally submitted to request the
                 authorization key. (See <em><a href="auth_keys.md">Authorization
                 Keys on Petitions</a></em>.)
             </td>
         </tr>
         <tr>
             <td><code>email</code></td>
+            <td><code>string</code></td>
             <td>
                 Email address of the signer.
             </td>
         </tr>
         <tr>
             <td><code>first_name</code></td>
+            <td><code>string</code></td>
             <td>
                 First name of the signer.
             </td>
         </tr>
         <tr>
             <td><code>last_name</code></td>
+            <td><code>string</code></td>
             <td>
                 Last name of the signer.
             </td>
         </tr>
         <tr>
             <td><code>address</code></td>
+            <td><code>string</code></td>
             <td>
                 Residential address of the signer.
             </td>
         </tr>
         <tr>
             <td><code>city</code></td>
+            <td><code>string</code></td>
             <td>
                 Residential city of the signer.
             </td>
         </tr>
         <tr>
             <td><code>state_province</code></td>
+            <td><code>string</code></td>
             <td>
                 State or province of the signer.
             </td>
         </tr>
         <tr>
             <td><code>postal_code</code></td>
+            <td><code>string</code></td>
             <td>
                 Postal code of the signer.
             </td>
         </tr>
         <tr>
             <td><code>country_code</code></td>
+            <td><code>string</code></td>
             <td>
                 Two-letter country code of the signer.
             </td>
         </tr>
         <tr>
             <td><code>phone</code></td>
+            <td><code>string</code></td>
             <td>
                 <em>(Optional)</em> Mobile phone number of the signer.
             </td>
         </tr>
         <tr>
             <td><code>reason</code></td>
+            <td><code>string</code></td>
             <td>
                 <em>(Optional)</em> The signer’s reason for signing.
             </td>
         </tr>
         <tr>
             <td><code>hidden</code></td>
+            <td><code>boolean</code></td>
             <td>
                 <em>(Optional)</em> Whether or not the signer’s name will
                 appear in the petition’s signature list and on their Change.org
@@ -311,24 +345,27 @@ terms of service and privacy policy.
 
 If the request is successful, the response will have an HTTP status code of 202
 and a brief successful result message. If it is not successful for whatever
-reason, the status code will vary depending on the circumstance. See 
+reason, the status code will vary depending on the circumstance. See
 [_Response Codes_](../../responses.md).
 
 <table>
     <thead>
         <th>Field Name</th>
+        <th>Type</th>
         <th>Description</th>
     </thead>
     <tbody>
         <tr>
             <td><code>result</code></td>
+            <td><code>string</code></td>
             <td>
-                Whether or not the signature was successfully queued for adding 
+                Whether or not the signature was successfully queued for adding
                 to the petition. Either success or failure.
             </td>
         </tr>
         <tr>
             <td><code>messages</code></td>
+            <td><code>array</code></td>
             <td>
                 <em>(If applicable)</em> An array of error messages.
             </td>
@@ -348,5 +385,5 @@ Examples:
             "messages": ["No signature data received."]
        }
 
-_A public API key, timestamp, and request signature are required parameters on 
+_A public API key, timestamp, and request signature are required parameters on
 all requests, so they are omitted from the tables and examples above._

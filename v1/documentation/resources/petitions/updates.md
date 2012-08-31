@@ -11,37 +11,42 @@ Returns the news updates on a petition.
 <table>
     <thead>
         <th>Parameter Name</th>
+        <th>Type</th>
         <th>Description</th>
     </thead>
     <tbody>
         <tr>
             <td><code>petition_id</code></td>
+            <td><code>int</code></td>
             <td>
-                <em>(In URL)</em> The petition from which updates should be 
+                <em>(In URL)</em> The petition from which updates should be
                 retrieved.
             </td>
         </tr>
         <tr>
             <td><code>page_size</code></td>
+            <td><code>int</code></td>
             <td>
-                <em>(Optional)</em>The maximum number of updates to return per 
-                request, but no more than 100. Returns a maximum of 10 updates 
+                <em>(Optional)</em>The maximum number of updates to return per
+                request, but no more than 100. Returns a maximum of 10 updates
                 if omitted.
             </td>
         </tr>
         <tr>
             <td><code>page</code></td>
+            <td><code>int</code></td>
             <td>
-                <em>(Optional)</em> The page offset by <code>page_size</code> 
+                <em>(Optional)</em> The page offset by <code>page_size</code>
                 updates. Returns the first page by default if omitted.
             </td>
         </tr>
         <tr>
             <td><code>sort</code></td>
+            <td><code>string</code></td>
             <td>
-                <em>(Optional)</em> The order by which updates will be returned. 
-                Accepted values are <code>time_asc</code> and 
-                <code>time_desc</code>. Returns updates in order of most recent 
+                <em>(Optional)</em> The order by which updates will be returned.
+                Accepted values are <code>time_asc</code> and
+                <code>time_desc</code>. Returns updates in order of most recent
                 if omitted.
             </td>
         </tr>
@@ -55,35 +60,41 @@ An array of petition updates.
 <table>
     <thead>
         <th>Field Name</th>
+        <th>Type</th>
         <th>Description</th>
     </thead>
     <tbody>
         <tr>
             <td><code>created_on</code></td>
+            <td><code>string</code> of ISO-8601 datetime</td>
             <td>
                 The date and time when this update was posted to the petition.
             </td>
         </tr>
         <tr>
             <td><code>content</code></td>
+            <td><code>string</code></td>
             <td>
                 The content of the update to the petition.
             </td>
         </tr>
         <tr>
             <td><code>link</code></td>
+            <td><code>string</code></td>
             <td>
                 <em>(If available)</em> A URL included in the update.
             </td>
         </tr>
         <tr>
             <td><code>author_name</code></td>
+            <td><code>string</code></td>
             <td>
                 The name of the author of the update.
             </td>
         </tr>
         <tr>
             <td><code>author_url</code></td>
+            <td><code>string</code></td>
             <td>
                 The URL to the Change.org profile page of the update author.
             </td>

@@ -10,11 +10,13 @@ Returns the target(s) of a petition.
 <table>
     <thead>
         <th>Parameter Name</th>
+        <th>Type</th>
         <th>Description</th>
     </thead>
     <tbody>
         <tr>
             <td><code>petition_id</code></td>
+            <td><code>int</code></td>
             <td>
                 <em>(In URL)</em> The petition from which the targets should be retrieved.
             </td>
@@ -34,18 +36,21 @@ An array of targets.
     <tbody>
         <tr>
             <td><code>name</code></td>
+            <td><code>string</code></td>
             <td>
                 The human-readable name of the petition target.
             </td>
         </tr>
         <tr>
             <td><code>title</code></td>
+            <td><code>string</code></td>
             <td>
                 <em>(If available)</em> The office, title, or organization of the target.
             </td>
         </tr>
         <tr>
             <td><code>type</code></td>
+            <td><code>string</code></td>
             <td>
                 The possible target types are
                 <ul>
@@ -56,6 +61,7 @@ An array of targets.
         </tr>
         <tr>
             <td><code>target_area</code></td>
+            <td><code>string</code></td>
             <td>
                 <em>(If applicable)</em> In the US, this is the two-letter state abbreviation if the target type is a US state government body, such as a state legislature or governor.
             </td>
