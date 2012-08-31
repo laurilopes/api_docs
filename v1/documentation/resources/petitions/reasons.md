@@ -117,7 +117,7 @@ Example:
 
     GET https://api.change.org/v1/petitions/48503/reasons?page_size=1&sort=time_desc
     => [{
-            "created_on": "2012-02-15 23:39:31 UTC",
+            "created_on": "2012-02-15T23:39:31Z",
             "content": "Because I’m tired of wearing red!",
             "like_count": 4,
             "author_name": "Jean-Luc Picard",

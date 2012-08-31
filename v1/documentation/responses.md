@@ -89,7 +89,7 @@ Here is an example request to retrieve the most recent signature of a petition:
             "city": "San Francisco",
             "state_province": "CA",
             "country": "US",
-            "signed_on": "2012-02-15 23:39:31 UTC"
+            "signed_on": "2012-02-15T23:39:31Z"
         }]
 
 Note: Authentication and validation clear-text parameters (public API key,

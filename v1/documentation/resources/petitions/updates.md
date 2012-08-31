@@ -106,14 +106,14 @@ Example:
 
     GET https://api.change.org/v1/petitions/48503/updates
     => [{
-            "created_on": "2012-03-14 03:32:39 UTC",
+            "created_on": "2012-03-14T03:32:39Z",
             "content": "We hit 2,000 signatures!",
             "link": "",
             "author_name": "Jean-Luc Picard",
             "author_url": "http://www.change.org/members/233311"
         },
         {
-            "created_on": "2012-03-23 15:22:21 UTC",
+            "created_on": "2012-03-23T15:22:21Z",
             "content": "Check out this great media coverage in the Times",
             "link": "http://www.thestarfleettimes.co.uk/petition-targets-starfleet",
             "author_name": "Jean-Luc Picard",

@@ -171,7 +171,7 @@ Example:
                 "city": "Paris",
                 "state_province": "",
                 "country": "FR",
-                "signed_on": "2012-02-15 23:39:31 UTC"
+                "signed_on": "2012-02-15T23:39:31Z"
             },
             {
                 "first_name": "William",
@@ -179,7 +179,7 @@ Example:
                 "city": "San Francisco",
                 "state_province": "CA",
                 "country": "US",
-                "signed_on": "2012-02-14 10:02:23 UTC"
+                "signed_on": "2012-02-14T10:02:23Z"
             }]
         }
 
