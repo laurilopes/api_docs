@@ -278,10 +278,10 @@ Example:
 <a name="get-petitions-get_id"></a>
 ### `GET petitions/get_id`
 
-Returns the unique change.org ID for the petition specified by
+Returns the unique Change.org ID for the petition specified by
 <code>petition_url</code>. Before performing requests on a petition, the
 unique Change.org ID is required. Obtaining the ID versus using the URL as an
-identifier is required since petition URLs can change.
+identifier is required because petition URLs can change.
 
 #### Request Parameters
 
