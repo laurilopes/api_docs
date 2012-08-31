@@ -43,7 +43,7 @@ accepted:
 ### Timestamp
 
 Every request must include a timestamp parameter with the current date and time
-in ISO 8601 format. This parameter is both sent in clear text for verification
+in ISO 8601 format. This parameter is sent in clear text for verification
 and included in the request signature as a salt. Requests submitted more than 5
 minutes before or after the date and time indicated by the timestamp will be
 rejected.
