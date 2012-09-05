@@ -93,9 +93,9 @@ key.
             <td><code>string</code> of ISO-8601 datetime</td>
             <td>
                 The timestamp of the request:
-                <code>YYYY-MM-DDThh:mmTZD</code>
+                <code>YYYY-MM-DDThh:mm:ssZ</code>
             </td>
-            <td><code>2012-04-18T21:02-07:00</code></td>
+            <td><code>2012-04-18T21:02-07:00Z</code></td>
         </tr>
         <tr>
             <td><code>endpoint</code></td>
@@ -144,8 +144,8 @@ clear-text parameters would be
         <tr>
             <td><code>timestamp</code></td>
             <td><code>string</code> of ISO-8601 datetime</td>
-            <td>The timestamp of the request: <code>YYYY-MM-DDThh:mmTZD</code></td>
-            <td><code>2012-04-18T21:02-07:00</code></td>
+            <td>The timestamp of the request: <code>YYYY-MM-DDThh:mm:ssZ</code></td>
+            <td><code>2012-04-18T21:02-07:00Z</code></td>
         </tr>
     </tbody>
 </table>  
