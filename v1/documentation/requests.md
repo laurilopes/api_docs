@@ -95,7 +95,7 @@ key.
                 The timestamp of the request:
                 <code>YYYY-MM-DDThh:mm:ssZ</code>
             </td>
-            <td><code>2012-04-18T21:02-07:00Z</code></td>
+            <td><code>2012-04-18T21:02:00Z</code></td>
         </tr>
         <tr>
             <td><code>endpoint</code></td>
