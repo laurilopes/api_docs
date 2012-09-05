@@ -35,8 +35,9 @@ The following HTTP status codes are possible in response to a request:
         <tr>
             <td>401</td>
             <td>Unauthorized</td>
-            <td>The request did not include a valid API key, secret, or petition
-                authorization key.</td>
+            <td>The request did not include a valid API key, secret token,
+                resource (e.g. petition) authorization key, or request
+                signature.</td>
         </tr>
         <tr>
             <td>403</td>
