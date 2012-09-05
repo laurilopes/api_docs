@@ -56,7 +56,7 @@ as a parameter in the request signature as a salt.
 ### Request Signature
 
 Every request must include a request signature parameter, appended to the
-clear-text parameters as rsig. This ensures that the request originated from an
+clear-text parameters as `rsig`. This ensures that the request originated from an
 authorized API user and, if applicable, that the user is authorized to perform
 the requested action.
 
