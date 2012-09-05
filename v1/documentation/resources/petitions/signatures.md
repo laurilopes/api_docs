@@ -81,7 +81,7 @@ offset by the `page` number given.
             <td><code>string</code></td>
             <td>
                 The API endpoint that can be called to retrieve the previous
-                page of signatures. null if there is no previous page.
+                page of signatures. <code>null</code> if there is no previous page.
             </td>
         </tr>
         <tr>
@@ -89,7 +89,7 @@ offset by the `page` number given.
             <td><code>string</code></td>
             <td>
                 The API endpoint that can be called to retrieve the next page
-                of signatures. null if there is no next page.
+                of signatures. <code>null</code> if there is no next page.
             </td>
         </tr>
         <tr>
@@ -161,7 +161,7 @@ Example:
 
     GET https://api.change.org/v1/petitions/48503/signatures?&page_size=2&sort=time_desc
     => { 
-        "signature_count": 2832,
+        "signature_count": 6,
         "prev_page_endpoint": null,
         "next_page_endpoint": "https://https://api.change.org/v1/petitions/48503/signatures?page=2&page_size=2&sort=time_desc",
         "total_pages": 3,
@@ -221,8 +221,8 @@ By adding signatures to a petition, the API user agrees to display the
 following text and links directly above or below the signature form:
 
 > This petition is powered by Change.org. By signing, you accept Change.org's
-terms of service and privacy policy.
-
+[terms of service](http://www.change.org/about/terms-of-service) and
+[privacy policy](http://www.change.org/about/privacy).
 
 #### Request Parameters
 
@@ -360,7 +360,8 @@ reason, the status code will vary depending on the circumstance. See
             <td><code>string</code></td>
             <td>
                 Whether or not the signature was successfully queued for adding
-                to the petition. Either success or failure.
+                to the petition. Either <code>success</code> or
+                <code>failure</code>.
             </td>
         </tr>
         <tr>

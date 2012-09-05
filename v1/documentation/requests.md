@@ -145,7 +145,7 @@ clear-text parameters would be
             <td><code>timestamp</code></td>
             <td><code>string</code> of ISO-8601 datetime</td>
             <td>The timestamp of the request: <code>YYYY-MM-DDThh:mm:ssZ</code></td>
-            <td><code>2012-04-18T21:02-07:00Z</code></td>
+            <td><code>2012-04-18T21:02:00Z</code></td>
         </tr>
     </tbody>
 </table>  
@@ -175,7 +175,7 @@ above:
 The signature is then appended as a parameter, `rsig`, to the clear-text query
 string. So the full request and return value would be
 
-    GET https://api.change.org/v1/petitions/4832?api_key=754a28309b20012f479b109add670a2c&rsig=1d12d0b923ecdbb4d5b1df8c7f2f1b3c2270bc6e538bbf5d32611d3429c1b310&timestamp=2012-04-18T21%3A02-07%3A00
+    GET https://api.change.org/v1/petitions/4832?api_key=754a28309b20012f479b109add670a2c&rsig=1d12d0b923ecdbb4d5b1df8c7f2f1b3c2270bc6e538bbf5d32611d3429c1b310&timestamp=2012-04-18T21%3A02%3A00Z
 
     => {    
             "title": "Ask Starfleet to Add a Purple Uniform",

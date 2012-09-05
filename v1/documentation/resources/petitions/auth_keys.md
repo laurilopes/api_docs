@@ -23,8 +23,8 @@ would most often be a reasonable source code (e.g. a specific YouTube video).
             <td><code>petition_id</code></td>
             <td><code>int</code></td>
             <td>
-                <em>(In URL)</em> The petition from which updates should be 
-                retrieved.
+                <em>(In URL)</em> The petition on which authorization is being
+                requested.
             </td>
         </tr>
         <tr>

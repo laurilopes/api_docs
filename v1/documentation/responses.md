@@ -82,7 +82,7 @@ All responses are sent in JSON.
 
 Here is an example request to retrieve the most recent signature of a petition:
 
-    GET https://api.change.org/v1/petitions/48503/signatures?page_size=1
+    GET https://api.change.org/v1/petitions/48503/signatures?page_size=1&sort=time_desc
     => [{ 
             "first_name": "Jean-Luc",
             "last_name": "Picard",
