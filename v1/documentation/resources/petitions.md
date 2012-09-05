@@ -36,7 +36,7 @@ array of IDs.
             <td><code>string</code> of comma-separated field names</td>
             <td>
                 (Optional) The fields of the petition data object that will be
-                returned for each petition in the response. It should be the
+                returned for each petition in the response. The parameter should include the
                 field names (described in
                 <code>GET petitions/:petition_id</code>), separated
                 by commas. Omitting this parameter will return all available
@@ -50,8 +50,8 @@ array of IDs.
             <td><code>int</code></td>
             <td>
                 (Optional) The maximum number of petition data objects to return
-                per request, but no more than 500. Returns the maximum number of
-                petitions if omitted.
+                per request, no more than 500. If omitted, returns the maximum number of
+                petitions.
             </td>
         </tr>
         <tr>
@@ -59,7 +59,7 @@ array of IDs.
             <td><code>int</code></td>
             <td>
                 (Optional) The page offset by <code>page_size</code> petitions.
-                Returns the first page by default if omitted.
+                If omitted, returns the first page by default.
             </td>
         </tr>
     </tbody>
@@ -132,7 +132,7 @@ petition target, URL to the petition image (if available), and signature count.
             <td><code>string</code> of comma-separated field names</td>
             <td>
                 <em>(Optional)</em> The fields that will be returned in the
-                response. It should be the field names (described below in
+                response. The parameter should include the field names (described below in
                 Response Data), separated by commas. Omitting this parameter
                 will return all available fields.<br />
                 <br />
@@ -330,4 +330,4 @@ Example:
 
 
 _A public API key, timestamp, and request signature are required parameters on
-all requests, so they are omitted from the tables and examples above._
+all requests, implicit in the tables and examples above._

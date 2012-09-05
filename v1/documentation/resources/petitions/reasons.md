@@ -28,8 +28,7 @@ Returns the reasons given by signers of a petition for having signed.
             <td><code>int</code></td>
             <td>
                 <em>(Optional)</em>The maximum number of reasons to return per 
-                request, but no more than 100. Returns a maximum of 10 reasons 
-                if omitted.
+                request, but no more than 100. If omitted, returns a maximum of 10 reasons.
             </td>
         </tr>
         <tr>
@@ -37,7 +36,7 @@ Returns the reasons given by signers of a petition for having signed.
             <td><code>int</code></td>
             <td>
                 <em>(Optional)</em>The page offset by <code>page_size</code> 
-                reasons. Returns the first page by default if omitted.
+                reasons. If omitted, returns the first page by default.
             </td>
         </tr>
         <tr>
@@ -46,9 +45,8 @@ Returns the reasons given by signers of a petition for having signed.
             <td>
                 <em>(Optional)</em>The order by which reasons will be returned. 
                 Accepted values are <code>popularity</code>, 
-                <code>time_asc</code>, and <code>time_desc</code>. Returns 
-                reasons in order of popularity (most number of likes) if
-                omitted.
+                <code>time_asc</code>, and <code>time_desc</code>. If omitted, returns
+                reasons in order of popularity (most number of likes).
             </td>
         </tr>
     </tbody>

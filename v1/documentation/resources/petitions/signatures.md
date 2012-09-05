@@ -32,8 +32,8 @@ Returns signatures on a petition.
             <td><code>int</code></td>
             <td>
                 <em>(Optional)</em> The maximum number of signatures to return
-                per request, but no more than 100. Returns a maximum of 10
-                signatures if omitted.
+                per request, but no more than 100. If omitted, returns a maximum of 10
+                signatures.
             </td>
         </tr>
         <tr>
@@ -41,7 +41,7 @@ Returns signatures on a petition.
             <td><code>int</code></td>
             <td>
                 <em>(Optional)</em> The page offset by <code>page_size</code>
-                signatures. Returns the first page by default if omitted.
+                signatures. If omitted, returns the first page by default.
             </td>
         </tr>
         <tr>
@@ -50,8 +50,7 @@ Returns signatures on a petition.
             <td>
                 <em>(Optional)</em> The order by which signatures will be
                 returned. Accepted values are <code>time_asc</code> and 
-                <code>time_desc</code>. Defaults to <code>time_asc</code>
-                if omitted.
+                <code>time_desc</code>. If omitted, defaults to <code>time_asc</code>.
             </td>
         </tr>
     </tbody>
@@ -334,7 +333,7 @@ following text and links directly above or below the signature form:
             <td>
                 <em>(Optional)</em> Whether or not the signer’s name will
                 appear in the petition’s signature list and on their Change.org
-                profile. If omitted, a signatures is public by default.
+                profile. If omitted, a signature is public by default.
                 Accepted values are <code>true</code> and <code>false</code>.
             </td>
         </tr>
@@ -387,4 +386,4 @@ Examples:
        }
 
 _A public API key, timestamp, and request signature are required parameters on
-all requests, so they are omitted from the tables and examples above._
+all requests, so they are implicit in the tables and examples._

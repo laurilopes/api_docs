@@ -4,7 +4,7 @@ All requests are made on a specific API resource:
 
     https://api.change.org/v1/[resource]
 
-The clear-text parameters in each requests must be accompanied by three
+The clear-text parameters in each request must be accompanied by three
 additional parameters: an _API key_, a _request signature_, and a _timestamp_.
 The request signature is generated using a _secret token_, a _timestamp_, and,
 in some cases, a _petition authorization key_. Requests to modify or update a
@@ -62,7 +62,7 @@ the requested action.
 
 The request signature consists of the hexadecimal SHA-2 digest of the
 alphabetized parameters in URL-encoded query string format. The parameters used
-to construct the signature are all those that are required for the specific
+to construct the signature are those that are required for the specific
 request, including the API key, along with the requestor’s secret token, the
 timestamp, the endpoint, and, if applicable, the relevant petition authorization
 key.

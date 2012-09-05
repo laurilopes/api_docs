@@ -28,8 +28,7 @@ Returns the news updates on a petition.
             <td><code>int</code></td>
             <td>
                 <em>(Optional)</em>The maximum number of updates to return per
-                request, but no more than 100. Returns a maximum of 10 updates
-                if omitted.
+                request, but no more than 100. If omitted, returns a maximum of 10 updates.
             </td>
         </tr>
         <tr>
@@ -37,7 +36,7 @@ Returns the news updates on a petition.
             <td><code>int</code></td>
             <td>
                 <em>(Optional)</em> The page offset by <code>page_size</code>
-                updates. Returns the first page by default if omitted.
+                updates. If omitted, returns the first page by default.
             </td>
         </tr>
         <tr>
@@ -46,8 +45,7 @@ Returns the news updates on a petition.
             <td>
                 <em>(Optional)</em> The order by which updates will be returned.
                 Accepted values are <code>time_asc</code> and
-                <code>time_desc</code>. Returns updates in order of most recent
-                if omitted.
+                <code>time_desc</code>. If omitted, returns most recent updates in order.
             </td>
         </tr>
     </tbody>
