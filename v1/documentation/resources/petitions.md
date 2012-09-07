@@ -186,6 +186,11 @@ petition target, URL to the petition image (if available), and signature count.
             <td>The petition letter to the target(s).</td>
         </tr>
         <tr>
+            <td><code>signature_count</code></td>
+            <td><code>int</code></td>
+            <td>The petition's total number of signatures.</td>
+        </tr>
+        <tr>
             <td><code>image_url</code></td>
             <td><code>string</code></td>
             <td>
@@ -214,11 +219,6 @@ petition target, URL to the petition image (if available), and signature count.
             <td>
                 <em>(If available)</em> The deadline for the petition.
             </td>
-        </tr>
-        <tr>
-            <td><code>signature_count</code></td>
-            <td><code>int</code></td>
-            <td>The petition's total number of signatures.</td>
         </tr>
         <tr>
             <td><code>creator_name</code></td>
