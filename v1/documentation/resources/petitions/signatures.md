@@ -69,6 +69,13 @@ offset by the `page` number given.
     </thead>
     <tbody>
         <tr>
+            <td><code>page</code></td>
+            <td><code>int</code></td>
+            <td>
+                The current page number. Will default to 1.
+            </td>
+        </tr>
+        <tr>
             <td><code>signature_count</code></td>
             <td><code>int</code></td>
             <td>
