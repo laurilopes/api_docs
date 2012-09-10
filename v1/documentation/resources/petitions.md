@@ -152,6 +152,11 @@ petition target, URL to the petition image (if available), and signature count.
     </thead>
     <tbody>
         <tr>
+            <td><code>petition_id</code></td>
+            <td><code>int</code></td>
+            <td>The id of the petition.</td>
+        </tr>
+        <tr>
             <td><code>title</code></td>
             <td><code>string</code></td>
             <td>The human-readable title of the petition.</td>
