@@ -6,7 +6,7 @@ All requests are made on a specific API resource:
 
 ## Content Type
 
-The body of POST and PUT requests, including any relevant parameters, can be
+The body of `POST` and `PUT` requests, including any relevant parameters, can be
 formatted as URL-encoded form data or Javascript Object Notation (JSON). The
 format is specified in the `Content-Type` HTTP header of a request.
 
@@ -45,11 +45,10 @@ See [_Authentication_](authentication.md) for more information about API keys.
 
 ### Endpoint
 
-The `endpoint` -- the path to which the HTTP request is made, not including the
-protocol or domain -- is included as a parameter because, once the request
-signature is generated including this value, it ensures that the request was
-sent to the intended enpoint. This mitigates against "man in the middle"
-attacks.
+The `endpoint` -- the path to which the HTTP request is made -- ensures that
+the request was sent to the intended enpoint since the request signature is
+generated with this value and checked against the actual request path. This
+mitigates against "man in the middle" attacks.
 
 Example:
 
@@ -73,7 +72,7 @@ clear-text parameters as `rsig`. This ensures that the request originated from a
 authorized API user and, if applicable, that the user is authorized to perform
 the requested action.
 
-Requests to modify or update a petition (e.g. signatures) require a petition
+Requests to modify or update a petition (e.g. adding signatures) require a petition
 authorization key, whereas requests for information do not.
 
 The request signature is a hexadecimal SHA-2 digest of the
@@ -121,7 +120,7 @@ The following table summarizes the paramters required for every request:
                 body or <code>GET</code> query string, with the secret token
                 and, if applicable, the resource authorization key appended.
             </td>
-            <td><code>/v1/petitions/48503</code></td>
+            <td><code>ac0889ce480e30151c08613093868d22e30d4fcb60cc42089313e9d6ccc5bcbc</code></td>
         </tr>
         <tr>
             <td><em>varies</em></td>
@@ -132,7 +131,7 @@ The following table summarizes the paramters required for every request:
     </tbody>
 </table>
 
-### `GET` Request Construction Example
+### Request Construction Example
 
 For example, when making a call to retrieve information about a petition, the
 clear-text parameters would be
@@ -148,10 +147,6 @@ clear-text parameters would be
             <td><code>754a28309b20012f479b109add670a2c</code></td>
         </tr>
         <tr>
-            <td><code>petition_id</code></td>
-            <td><code>4832</code></td>
-        </tr>
-        <tr>
             <td><code>timestamp</code></td>
             <td><code>2012-04-18T21:02:00Z</code></td>
         </tr>
@@ -162,23 +157,18 @@ clear-text parameters would be
     </tbody>
 </table>  
 
-In `petition/:petition_id` requests, note that although `petition_id` is
-included as part of the request URL and not the query string, it is still
-considered a parameter.
+The request signature is generated from the query string of this `GET` request
+along with the user's secret token. In this example, no petition authorization
+key is needed since petition information requests are not restricted.
 
-The request signature is generated from the parameters above along with the
-user's secret token. In this example, no petition authorization key is needed
-since petition information requests are not restricted.
+To construct the request signature, we take the query string:
 
-To construct the request signature for this request, we take the query string
-of this `GET` request:
-
-    api_key=754a28309b20012f479b109add670a2c&endpoint=https%3A%2F%2Fapi.change.org%2Fv1%2Fpetitions%2F48503&petition_id=4832&timestamp=2012-04-18T21%3A02-07%3A00
+    api_key=754a28309b20012f479b109add670a2c&endpoint=https%3A%2F%2Fapi.change.org%2Fv1%2Fpetitions%2F48503&timestamp=2012-04-18T21%3A02-07%3A00
 
 Then the secret token, in this case `003af2309b1f012f479b109add670a2c` is
 appended to the end of the string
 
-    api_key=754a28309b20012f479b109add670a2c&endpoint=https%3A%2F%2Fapi.change.org%2Fv1%2Fpetitions%2F48503&petition_id=4832&timestamp=2012-04-18T21%3A02-07%3A00003af2309b1f012f479b109add670a2c
+    api_key=754a28309b20012f479b109add670a2c&endpoint=https%3A%2F%2Fapi.change.org%2Fv1%2Fpetitions%2F48503&timestamp=2012-04-18T21%3A02-07%3A00003af2309b1f012f479b109add670a2c
 
 And the final request signature would be the 256-bit SHA-2 digest of the string
 above:
@@ -188,10 +178,10 @@ above:
 The signature is then appended as another parameter, `rsig`, to the clear-text
 query string. So the full request and return value would be
 
-    GET https://api.change.org/v1/petitions/4832?api_key=754a28309b20012f479b109add670a2c&endpoint=https%3A%2F%2Fapi.change.org%2Fv1%2Fpetitions%2F48503&petition_id=4832&timestamp=2012-04-18T21%3A02-07%3A00&rsig=ac0889ce480e30151c08613093868d22e30d4fcb60cc42089313e9d6ccc5bcbc
+    GET https://api.change.org/v1/petitions/4832?api_key=754a28309b20012f479b109add670a2c&endpoint=https%3A%2F%2Fapi.change.org%2Fv1%2Fpetitions%2F48503&timestamp=2012-04-18T21%3A02-07%3A00&rsig=ac0889ce480e30151c08613093868d22e30d4fcb60cc42089313e9d6ccc5bcbc
     => {    
             "title": "Ask Starfleet to Add a Purple Uniform",
             "url": "http://www.change.org/petitions/ask-starfleet-to-add-a-purple-uniform",
             "overview": "The current three colors are getting old. Additional colors, such as purple, would be a welcome change!",
-            [...]
+            [...etc...]
         }
