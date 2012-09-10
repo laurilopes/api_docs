@@ -136,14 +136,21 @@ The signatures array contains objects with the following data:
             <td><code>state_province</code></td>
             <td><code>string</code></td>
             <td>
-                <em>(If available)</em> State or province of the signer.
+                <em>(If available)</em> The standard abbreviation of the state or province of the signer.
             </td>
         </tr>
         <tr>
-            <td><code>country</code></td>
+            <td><code>country_name</code></td>
             <td><code>string</code></td>
             <td>
-                Full country name of the signer.
+                Full English name of the country of the signer.
+            </td>
+        </tr>
+        <tr>
+            <td><code>country_code</code></td>
+            <td><code>string</code></td>
+            <td>
+                The two-letter code of the country of the signer.
             </td>
         </tr>
         <tr>
@@ -165,19 +172,19 @@ Example:
         "next_page_endpoint": "https://https://api.change.org/v1/petitions/48503/signatures?page=2&page_size=2&sort=time_desc",
         "total_pages": 3,
         "signatures": [{
-                "first_name": "Jean-Luc",
-                "last_name": "Picard",
-                "city": "Paris",
+                "name": "Jean-Luc Picard",
+                "city": "La Barre",
                 "state_province": "",
-                "country": "FR",
+                "country_code": "FR",
+                "country_name": "France",
                 "signed_on": "2012-02-15T23:39:31Z"
             },
             {
-                "first_name": "William",
-                "last_name": "Riker",
+                "name": "William Riker",
                 "city": "San Francisco",
                 "state_province": "CA",
-                "country": "US",
+                "country_code": "US",
+                "country_name": "United States",
                 "signed_on": "2012-02-14T10:02:23Z"
             }]
         }
@@ -296,7 +303,7 @@ following text and links directly above or below the signature form:
             <td><code>state_province</code></td>
             <td><code>string</code></td>
             <td>
-                State or province of the signer.
+                The standard abbreviation for the signer's state or province.
             </td>
         </tr>
         <tr>
