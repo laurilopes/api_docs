@@ -157,7 +157,7 @@ The `reasons` array contains objects with the following data:
             <td><code>flag_endpoint</code></td>
             <td><code>string</code></td>
             <td>
-                The URL to send a <code>PUT</code> request to if this reason 
+                <em>(Not yet implemented.)</em> The URL to send a <code>PUT</code> request to if this reason
                 should be removed for inappropriate content. The body of the
                 <code>PUT</code> request should include a parameter 
                 <code>why</code> that indicates the justification for flagging.
