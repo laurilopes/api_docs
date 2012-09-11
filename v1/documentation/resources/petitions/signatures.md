@@ -262,8 +262,7 @@ following text and links directly above or below the signature form:
             <td><code>auth_key</code></td>
             <td><code>string</code></td>
             <td>
-                <em>(In request signature only)</em> The petition authorization
-                key.
+                The petition authorization key.
             </td>
         </tr>
         <tr>

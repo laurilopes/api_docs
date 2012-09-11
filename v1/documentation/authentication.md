@@ -12,13 +12,13 @@ The parameter name is `api_key`.
 Every user receives a companion private secret token. This string is used as a
 salt in generating request signatures and is never sent in clear text.
 
-## Petition Authorization Key
+## Authorization Key
 
-For certain requests, request signatures must be generated using a unique
-petition authorization key as a salt in addition to the secret. This
-authorization key is granted by the petition owner and can be revoked. Each
-petition authorization key is specific to a petition, a source, and an API user.
+For certain requests, a resource (e.g. petition) authorization key must be
+added as a request parameter. The authorization key is granted by the resource
+owner and can be revoked. Each authorization key is specific to the resource,
+a source (of the request), and an API user.
 
-Partners wishing to obtain a petition authorization key on behalf of an
+Partners wishing to obtain a authorization keys on behalf of an
 individual may do so through an authorization key API request. See
 [_Authorization Keys on Petitions_](resources/petitions/auth_keys.md).
