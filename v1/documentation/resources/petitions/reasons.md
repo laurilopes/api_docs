@@ -54,7 +54,62 @@ Returns the reasons given by signers of a petition for having signed.
 
 #### Response Data
 
-An array of reasons for signing the petition.
+<table>
+    <thead>
+        <th>Field Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>reason_count</code></td>
+            <td><code>int</code></td>
+            <td>
+                The number of total reasons for signing on this petition.
+            </td>
+        </tr>
+        <tr>
+            <td><code>prev_page_endpoint</code></td>
+            <td><code>string</code></td>
+            <td>
+                The API endpoint that can be called to retrieve the previous
+                page of reasons. <code>null</code> if there is no previous page.
+            </td>
+        </tr>
+        <tr>
+            <td><code>next_page_endpoint</code></td>
+            <td><code>string</code></td>
+            <td>
+                The API endpoint that can be called to retrieve the next page
+                of reasons. <code>null</code> if there is no next page.
+            </td>
+        </tr>
+        <tr>
+            <td><code>page</code></td>
+            <td><code>int</code></td>
+            <td>
+                The current page number.
+            </td>
+        </tr>
+        <tr>
+            <td><code>total_pages</code></td>
+            <td><code>int</code></td>
+            <td>
+                The total number of pages of reasons (of size specified by
+                <code>page_size</code>)
+            </td>
+        </tr>
+        <tr>
+            <td><code>reasons</code></td>
+            <td><code>array</code></td>
+            <td>
+                The array of reasons for signing.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+The `reasons` array contains objects with the following data:
 
 <table>
     <thead>
@@ -113,12 +168,19 @@ An array of reasons for signing the petition.
 
 Example:
 
-    GET https://api.change.org/v1/petitions/48503/reasons?page_size=1&sort=time_desc
-    => [{
-            "created_on": "2012-02-15T23:39:31Z",
-            "content": "Because I’m tired of wearing red!",
-            "like_count": 4,
-            "author_name": "Jean-Luc Picard",
-            "author_url": "http://www.change.org/members/230923"
-            "flag_endpoint": "http://api.change.org/petitions/48503/reasons/569/flag"
-        }]
+    GET https://api.change.org/v1/petitions/48503/reasons?page_size=10&sort=time_desc
+    => {
+        "reason_count": 1,
+        "prev_page_endpoint": null,
+        "next_page_endpoint": null,
+        "page": 1,
+        "total_pages": 1,
+        "reasons": [{
+                "created_on": "2012-02-15T23:39:31Z",
+                "content": "Because I’m tired of wearing red!",
+                "like_count": 4,
+                "author_name": "Jean-Luc Picard",
+                "author_url": "http://www.change.org/members/230923"
+                "flag_endpoint": "http://api.change.org/petitions/48503/reasons/569/flag"
+            }]
+        }

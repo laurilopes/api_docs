@@ -96,6 +96,13 @@ array of IDs.
             petitions. <code>null</code> if there is no next page.</td>
         </tr>
         <tr>
+            <td><code>page</code></td>
+            <td><code>int</code></td>
+            <td>
+                The current page number.
+            </td>
+        </tr>
+        <tr>
             <td><code>total_pages</code></td>
             <td><code>int</code></td>
             <td>The total number of pages of petitions (of size specified by

@@ -92,6 +92,13 @@ offset by the `page` number given.
             </td>
         </tr>
         <tr>
+            <td><code>page</code></td>
+            <td><code>int</code></td>
+            <td>
+                The current page number.
+            </td>
+        </tr>
+        <tr>
             <td><code>total_pages</code></td>
             <td><code>int</code></td>
             <td>
@@ -170,6 +177,7 @@ Example:
         "signature_count": 6,
         "prev_page_endpoint": null,
         "next_page_endpoint": "https://https://api.change.org/v1/petitions/48503/signatures?page=2&page_size=2&sort=time_desc",
+        "page": 1,
         "total_pages": 3,
         "signatures": [{
                 "name": "Jean-Luc Picard",
