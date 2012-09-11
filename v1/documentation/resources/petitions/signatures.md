@@ -192,10 +192,13 @@ Example:
 <a name="get-signatures-recent"></a>
 ### `GET petitions/:petition_id/signatures/recent`
 
-Returns a maximum of the 10 most recent signatures on a petition. This is an
-alias for
+Returns an array of the 10 most recent signatures on a petition.
+
+This is similar to
 
     petitions/:petition_id/signatures?page_size=10&sort=time_desc
+
+but will not return pagination information or endpoints.
 
 #### Request Parameters
 
