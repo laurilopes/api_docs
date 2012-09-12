@@ -14,11 +14,11 @@ salt in generating request signatures and is never sent in clear text.
 
 ## Authorization Key
 
-For certain requests, a resource (e.g. petition) authorization key must be
-added as a request parameter. The authorization key is granted by the resource
-owner and can be revoked. Each authorization key is specific to the resource,
+For certain requests, a resource (e.g. a petition) authorization key must be
+used as an added salt. The authorization key is granted by the resource
+owner and can be revoked. Each authorization key is specific to a resource,
 a source (of the request), and an API user.
 
 Partners wishing to obtain a authorization keys on behalf of an
-individual may do so through an authorization key API request. See
+individual may do so through an authorization key API request. See, for example,
 [_Authorization Keys on Petitions_](resources/petitions/auth_keys.md).
