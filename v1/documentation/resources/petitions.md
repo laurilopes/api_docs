@@ -3,7 +3,9 @@
 ## Petitions
 
 * [`GET petitions`](#get-petitions)
+* [`POST petitions`](#post-petitions)
 * [`GET petitions/:petition_id`](#get-petitions-petition_id)
+* [`PUT petitions/:petition_id`](#put-petitions-petition_id)
 * [`GET petitions/get_id`](#get-petitions-get_id)
 
 <a name="get-petitions"></a>
@@ -118,6 +120,172 @@ array of IDs.
         </tr>
     </tbody>
 </table>
+
+<a name="post-petitions"></a>
+### `POST petitions`
+
+Creates a new petition and returns the petition's ID and URL.
+
+#### Request Parameters
+
+<table>
+    <thead>
+        <th>Parameter Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>title</code></td>
+            <td><code>string</code></td>
+            <td>The human-readable title of the petition.</td>
+        </tr>
+        <tr>
+            <td><code>overview</code></td>
+            <td><code>string</code></td>
+            <td>
+                The overview text of the petition. Supports basic HTML tags:
+                <code>a, p, strong, em</code>.
+            </td>
+        </tr>
+        <tr>
+            <td><code>targets</code></td>
+            <td><code>array</code></td>
+            <td>
+                An array of target(s) of the petition. See the <em>Target
+                Request Parameters</em> table below.
+            </td>
+        </tr>
+        <tr>
+            <td><code>letter</code></td>
+            <td><code>string</code></td>
+            <td>The petition letter to the target(s).</td>
+        </tr>
+        <tr>
+            <td><code>image_url</code></td>
+            <td><code>string</code></td>
+            <td>
+                <em>(Optional)</em>The URL to the petition's image. This image
+                will be uploaded to Change.org's servers from the URL provided.
+                The ideal dimensions are 556 px by 304 px.
+            </td>
+        </tr>
+        <tr>
+            <td><code>category</code></td>
+            <td><code>string</code></td>
+            <td>
+                <em>(Optional)</em> The category that the petition is in on
+                Change.org. Acceptable values are <code>animals, criminaljustice,
+                economicjustice, education, environment, gayrights, health,
+                humanrights, humantrafficking, immigration, food,
+                womensrights</code>
+            </td>
+        </tr>
+        <tr>
+            <td><code>goal</code></td>
+            <td><code>int</code></td>
+            <td>
+                <em>(Optional)</em> The signature goal for a petition.
+            </td>
+        </tr>
+        <tr>
+            <td><code>end_date</code></td>
+            <td><code>string</code> of ISO-8601 datetime</td>
+            <td>
+                <em>(Optional)</em> The deadline for the petition.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+##### Target Request Parameters
+
+The following target objects can be repeated.
+
+<table>
+    <thead>
+        <th>Parameter Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>name</code></td>
+            <td><code>string</code></td>
+            <td>
+                The human-readable name of the petition target.
+            </td>
+        </tr>
+        <tr>
+            <td><code>title</code></td>
+            <td><code>string</code></td>
+            <td>
+                <em>(Optional)</em> The office, title, or organization of the
+                target.
+            </td>
+        </tr>
+        <tr>
+            <td><code>email</code></td>
+            <td><code>string</code></td>
+            <td>
+                <em>(Optional)</em> The email address to which the petition
+                letter will be sent upon each signature.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+#### Response Data
+
+<table>
+    <thead>
+        <th>Field Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>petition_id</code></td>
+            <td><code>int</code></td>
+            <td>
+                The unique Change.org ID of the new petition.
+            </td>
+        </tr>
+        <tr>
+            <td><code>petition_url</code></td>
+            <td><code>string</code></td>
+            <td>
+                The URL of the petition on Change.org
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+Example:
+
+    POST https://api.change.org/v1/petitions
+    {
+        "title": "Ask Starfleet to Build the Enterprise F",
+        "overview": "I'm really getting tired of the Enterprise E. It <strong>was</strong> cool when it was launched, but I'm tired of it now.",
+        "targets": [
+            {
+                "name": "Kathryn Janeway",
+                "title": "Admiral",
+                "email": "kate@mail.voyager.com"
+            },
+            {
+                "name": "Worf",
+                "title": "Ambassador",
+                "email": "prunejuice7@klingons.net"
+            }
+        ],
+        "letter": "Dear Captain Janeway,\n\nIt's time to build a new ship. Will you commit to building it?\n\nSincerely,",
+        "image_url": "http://images2.wikia.nocookie.net/__cb20100226011030/memoryalpha/en/images/6/66/USS_Enterprise-E_in_nebula.jpg"
+    }
+    =>  {
+            "petition_id": 48398,
+            "petition_url": "http://www.change.org/petitions/ask-starfleet-to-build-the-enterprise-f"
+        }
 
 <a name="get-petitions-petition_id"></a>
 ### `GET petitions/:petition_id`
@@ -296,6 +464,125 @@ Example:
             "creator_url": "http://www.change.org/members/382934"
         }
 
+<a name="put-petitions-petition_id"></a>
+### `PUT petitions/:petition_id`
+
+Updates information for a given petition. A petition's attributes will remain
+unchanged except in cases where new information is specified, so all request
+parameters are optional.
+
+#### Request Parameters
+
+<table>
+    <thead>
+        <th>Parameter Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>title</code></td>
+            <td><code>string</code></td>
+            <td><em>(Optional)</em> The human-readable title of the petition.</td>
+        </tr>
+        <tr>
+            <td><code>overview</code></td>
+            <td><code>string</code></td>
+            <td>
+                <em>(Optional)</em> The overview text of the petition. Supports basic HTML tags:
+                <code>a, p, strong, em</code>.
+            </td>
+        </tr>
+        <tr>
+            <td><code>targets</code></td>
+            <td><code>array</code></td>
+            <td>
+                <em>(Optional)</em> An array of target(s) of the petition.
+                See the <em>Target Request Parameters</em> table above under
+                <code>POST petitions</code>.
+            </td>
+        </tr>
+        <tr>
+            <td><code>letter</code></td>
+            <td><code>string</code></td>
+            <td><em>(Optional)</em> The petition letter to the target(s).</td>
+        </tr>
+        <tr>
+            <td><code>image_url</code></td>
+            <td><code>string</code></td>
+            <td>
+                <em>(Optional)</em>The URL to the petition's image. This image
+                will be uploaded to Change.org's servers from the URL provided.
+                The ideal dimensions are 556 px by 304 px.
+            </td>
+        </tr>
+        <tr>
+            <td><code>category</code></td>
+            <td><code>string</code></td>
+            <td>
+                <em>(Optional)</em> The category that the petition is in on
+                Change.org. Acceptable values are <code>animals, criminaljustice,
+                economicjustice, education, environment, gayrights, health,
+                humanrights, humantrafficking, immigration, food,
+                womensrights</code>
+            </td>
+        </tr>
+        <tr>
+            <td><code>goal</code></td>
+            <td><code>int</code></td>
+            <td>
+                <em>(Optional)</em> The signature goal for a petition.
+            </td>
+        </tr>
+        <tr>
+            <td><code>end_date</code></td>
+            <td><code>string</code> of ISO-8601 datetime</td>
+            <td>
+                <em>(Optional)</em> The deadline for the petition.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+#### Response Data
+
+<table>
+    <thead>
+        <th>Field Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>petition_id</code></td>
+            <td><code>int</code></td>
+            <td>
+                The unique Change.org ID of the new petition.
+            </td>
+        </tr>
+        <tr>
+            <td><code>petition_url</code></td>
+            <td><code>string</code></td>
+            <td>
+                The URL of the petition on Change.org, which may have changed
+                if the title was altered.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+Example:
+
+    PUT https://api.change.org/v1/petitions/48398
+    {
+        "title": "Ask Starfleet to Build the Enterprise F, please!",
+        "letter": "Dear Capt. Janeway & Amb. Spock,\n\nIt's time to build a new ship. Will you commit to building it?\n\nSincerely,",
+    }
+    =>  {
+            "petition_id": 48398,
+            "petition_url": "http://www.change.org/petitions/ask-starfleet-to-build-the-enterprise-f-please"
+        }
+
 <a name="get-petitions-get_id"></a>
 ### `GET petitions/get_id`
 
@@ -348,7 +635,6 @@ Example:
 
     GET https://api.change.org/v1/petitions/get_id?petition_url=http%3A%2F%2Fwww.change.org%2Fpetitions%2Fask-starfleet-to-add-a-purple-uniform
     => { "petition_id": 949821 }
-
 
 _A public API key, timestamp, and request signature are required parameters on
 all requests, implicit in the tables and examples above._
