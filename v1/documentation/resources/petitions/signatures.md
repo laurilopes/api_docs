@@ -402,5 +402,6 @@ Examples:
             "messages": ["No signature data received."]
        }
 
-_A public API key, timestamp, and request signature are required parameters on
-all requests, so they are implicit in the tables and examples._
+_Note: A public API key, timestamp, endpoint, and request signature are
+required parameters on all requests, and have been omitted from the tables
+and examples above._

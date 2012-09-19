@@ -82,3 +82,7 @@ Example:
             "type": "us_government",
             "target_area": "AL"
         }]
+
+_Note: A public API key, timestamp, endpoint, and request signature are
+required parameters on all requests, and have been omitted from the tables
+and examples above._

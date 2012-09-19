@@ -171,3 +171,7 @@ Example:
                 "author_url": "http://www.change.org/members/233311"
             }]
         }
+
+_Note: A public API key, timestamp, endpoint, and request signature are
+required parameters on all requests, and have been omitted from the tables
+and examples above._
