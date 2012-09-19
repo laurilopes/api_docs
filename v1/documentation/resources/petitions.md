@@ -157,9 +157,19 @@ Creates a new petition and returns the petition's ID and URL.
             </td>
         </tr>
         <tr>
-            <td><code>letter</code></td>
+            <td><code>letter_subject</code></td>
             <td><code>string</code></td>
-            <td>The petition letter to the target(s).</td>
+            <td>The subject line of the petition letter to the target(s).</td>
+        </tr>
+        <tr>
+            <td><code>letter_salutation</code></td>
+            <td><code>string</code></td>
+            <td>The salutation of the petition letter to the target(s).</td>
+        </tr>
+        <tr>
+            <td><code>letter_body</code></td>
+            <td><code>string</code></td>
+            <td>The body content of the petition letter to the target(s).</td>
         </tr>
         <tr>
             <td><code>image_url</code></td>
@@ -279,7 +289,9 @@ Example:
                 "email": "prunejuice7@klingons.net"
             }
         ],
-        "letter": "Dear Captain Janeway,\n\nIt's time to build a new ship. Will you commit to building it?\n\nSincerely,",
+        "letter_subject": "Please build a new Enterprise",
+        "letter_salutation": "Dear Captain Janeway,",
+        "letter_body": "It's time to build a new ship. Will you commit to building it?\n\nSincerely,",
         "image_url": "http://images2.wikia.nocookie.net/__cb20100226011030/memoryalpha/en/images/6/66/USS_Enterprise-E_in_nebula.jpg"
     }
     =>  {
@@ -363,9 +375,19 @@ petition target, URL to the petition image (if available), and signature count.
             </td>
         </tr>
         <tr>
-            <td><code>letter</code></td>
+            <td><code>letter_subject</code></td>
             <td><code>string</code></td>
-            <td>The petition letter to the target(s).</td>
+            <td>The subject line of the petition letter to the target(s).</td>
+        </tr>
+        <tr>
+            <td><code>letter_salutation</code></td>
+            <td><code>string</code></td>
+            <td>The salutation of the petition letter to the target(s).</td>
+        </tr>
+        <tr>
+            <td><code>letter_body</code></td>
+            <td><code>string</code></td>
+            <td>The body content of the petition letter to the target(s).</td>
         </tr>
         <tr>
             <td><code>signature_count</code></td>
