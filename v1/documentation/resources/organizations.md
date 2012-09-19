@@ -4,6 +4,7 @@
 
 * [`GET organizations/:organization_id`](#get-organizations-organization_id)
 * [`GET organizations/:organization_id/petitions`](#get-organizations-organization_id-petitions)
+* [`GET organizations/get_id`](#get-organizations-get_id)
 
 <a name="get-organizations-organization_id"></a>
 ### `GET organizations/:organization_id`
@@ -257,6 +258,59 @@ _[Petitions](petitions.md)_.
         </tr>
     </tbody>
 </table>
+
+<a name="get-organizations-get_id"></a>
+### `GET organizations/get_id`
+
+Returns the unique Change.org ID for the organization specified by
+<code>organization_url</code>, which is the URL to the organization's profile
+on Change.org. Before performing requests on an organization
+resource, this ID is required because organization profile URLs can change.
+
+#### Request Parameters
+
+<table>
+    <thead>
+        <th>Parameter Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>organization_url</code></td>
+            <td><code>string</code></td>
+            <td>
+                The organization whose ID will be retrieved.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+#### Response Data
+
+The ID of the requested organization.
+
+<table>
+    <thead>
+        <th>Field Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>organization_id</code></td>
+            <td><code>int</code></td>
+            <td>
+                The unique Change.org ID of the organization.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+Example:
+
+    GET https://api.change.org/v1/organizations/get_id?organization_url=http%3A%2F%2Fwww.change.org%2Fgroups%2Fthe_federation
+    => { "organization_id": 73899 }
 
 _Note: A public API key, timestamp, endpoint, and request signature are
 required parameters on all requests, and have been omitted from the tables
