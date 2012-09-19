@@ -70,7 +70,7 @@ Returns information about the specified organization.
             <td><code>city</code></td>
             <td><code>string</code></td>
             <td>
-                City of the organization.
+                <em>(If available)</em> City of the organization.
             </td>
         </tr>
         <tr>
