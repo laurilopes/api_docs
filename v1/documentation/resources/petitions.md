@@ -636,5 +636,6 @@ Example:
     GET https://api.change.org/v1/petitions/get_id?petition_url=http%3A%2F%2Fwww.change.org%2Fpetitions%2Fask-starfleet-to-add-a-purple-uniform
     => { "petition_id": 949821 }
 
-_A public API key, timestamp, and request signature are required parameters on
-all requests, implicit in the tables and examples above._
+_Note: A public API key, timestamp, endpoint, and request signature are
+required parameters on all requests, and have been omitted from the tables
+and examples above._

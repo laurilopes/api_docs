@@ -93,5 +93,6 @@ Here is an example request to retrieve the most recent signature of a petition:
             "signed_on": "2012-02-15T23:39:31Z"
         }]
 
-_Note: Authentication and validation clear-text parameters (public API key,
-request signature, and timestamp) were omitted from the request above._
+_Note: A public API key, timestamp, endpoint, and request signature are
+required parameters on all requests, and have been omitted from the tables
+and examples above._
