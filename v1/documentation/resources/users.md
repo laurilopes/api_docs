@@ -226,7 +226,8 @@ _[Petitions](petitions.md)_.
 ### `GET users/:user_id/signed_petitions`
 
 Returns the array of petitions that were signed by the specified user.
-For more information about the petition information returned, see
+Signatures that are hidden by the user will not be returned. For more
+information about the petition information returned, see
 _[Petitions](petitions.md)_.
 
 #### Request Parameters

@@ -206,7 +206,7 @@ _[Petitions](petitions.md)_.
     </thead>
     <tbody>
         <tr>
-            <td><code>user_id</code></td>
+            <td><code>organization_id</code></td>
             <td><code>int</code></td>
             <td>
                 The ID of the organization whose petitions have been returned.
