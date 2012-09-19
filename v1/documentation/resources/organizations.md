@@ -176,6 +176,23 @@ _[Petitions](petitions.md)_.
                 Example: <code>"title,url,signature_count"</code>
             </td>
         </tr>
+        <tr>
+            <td><code>page_size</code></td>
+            <td><code>int</code></td>
+            <td>
+                (Optional) The maximum number of petition data objects to return
+                per request, no more than 500. If omitted, returns the maximum number of
+                petitions.
+            </td>
+        </tr>
+        <tr>
+            <td><code>page</code></td>
+            <td><code>int</code></td>
+            <td>
+                (Optional) The page offset by <code>page_size</code> petitions.
+                If omitted, returns the first page by default.
+            </td>
+        </tr>
     </tbody>
 </table>
 
@@ -194,6 +211,41 @@ _[Petitions](petitions.md)_.
             <td>
                 The ID of the organization whose petitions have been returned.
             </td>
+        </tr>
+        <tr>
+            <td><code>page</code></td>
+            <td><code>int</code></td>
+            <td>
+                The current page number. Defaults to 1.
+            </td>
+        </tr>
+        <tr>
+            <td><code>prev_page_endpoint</code></td>
+            <td><code>string</code></td>
+            <td>
+                The API endpoint that can be called to retrieve the previous
+                page of petitions. <code>null</code> if there is no previous
+                page.
+            </td>
+        </tr>
+        <tr>
+            <td><code>next_page_endpoint</code></td>
+            <td><code>string</code></td>
+            <td>The API endpoint that can be called to retrieve the next page of
+            petitions. <code>null</code> if there is no next page.</td>
+        </tr>
+        <tr>
+            <td><code>page</code></td>
+            <td><code>int</code></td>
+            <td>
+                The current page number.
+            </td>
+        </tr>
+        <tr>
+            <td><code>total_pages</code></td>
+            <td><code>int</code></td>
+            <td>The total number of pages of petitions (of size specified by
+            <code>page_size</code>)</td>
         </tr>
         <tr>
             <td><code>petitions</code></td>
