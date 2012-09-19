@@ -610,8 +610,7 @@ Example:
 
 Returns the unique Change.org ID for the petition specified by
 <code>petition_url</code>. Before performing requests on a petition, the
-unique Change.org ID is required. Obtaining the ID versus using the URL as an
-identifier is required because petition URLs can change.
+unique Change.org ID is required because petition URLs can change.
 
 #### Request Parameters
 

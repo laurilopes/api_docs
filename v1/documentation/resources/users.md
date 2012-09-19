@@ -5,6 +5,7 @@
 * [`GET users/:user_id`](#get-users-user_id)
 * [`GET users/:user_id/created_petitions`](#get-users-user_id-created_petitions)
 * [`GET users/:user_id/signed_petitions`](#get-users-user_id-signed_petitions)
+* [`GET users/get_id`](#get-users-get_id)
 
 <a name="get-users-user_id"></a>
 ### `GET users/:user_id`
@@ -341,6 +342,59 @@ _[Petitions](petitions.md)_.
         </tr>
     </tbody>
 </table>
+
+<a name="get-users-get_id"></a>
+### `GET users/get_id`
+
+Returns the unique Change.org ID for the user specified by
+<code>user_url</code>, which is the URL to the user's Change.org profile.
+Before performing requests on a user resource, this ID is required because
+user profile URLs can change.
+
+#### Request Parameters
+
+<table>
+    <thead>
+        <th>Parameter Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>user_id</code></td>
+            <td><code>string</code></td>
+            <td>
+                The user whose ID will be retrieved.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+#### Response Data
+
+The ID of the requested user.
+
+<table>
+    <thead>
+        <th>Field Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>user_id</code></td>
+            <td><code>int</code></td>
+            <td>
+                The unique Change.org ID of the user.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+Example:
+
+    GET https://api.change.org/v1/users/get_id?user_url=http%3A%2F%2Fwww.change.org%2Fmembers%2Fpavelchekov
+    => { "user_id": 298374 }
 
 _Note: A public API key, timestamp, endpoint, and request signature are
 required parameters on all requests, and have been omitted from the tables
