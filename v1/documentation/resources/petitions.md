@@ -176,8 +176,8 @@ Creates a new petition and returns the petition's ID and URL.
             <td>
                 <em>(Optional)</em> The category that the petition is in on
                 Change.org. Acceptable values are <code>animals, criminaljustice,
-                economicjustice, education, environment, gayrights, health,
-                humanrights, humantrafficking, immigration, food,
+                economicjustice, education, environment, gayrights,<br />health,
+                humanrights, humantrafficking, immigration, food,<br />
                 womensrights</code>
             </td>
         </tr>
@@ -185,7 +185,7 @@ Creates a new petition and returns the petition's ID and URL.
             <td><code>goal</code></td>
             <td><code>int</code></td>
             <td>
-                <em>(Optional)</em> The signature goal for a petition.
+                <em>(Optional)</em> The signature goal for the petition.
             </td>
         </tr>
         <tr>
@@ -522,8 +522,8 @@ parameters are optional.
             <td>
                 <em>(Optional)</em> The category that the petition is in on
                 Change.org. Acceptable values are <code>animals, criminaljustice,
-                economicjustice, education, environment, gayrights, health,
-                humanrights, humantrafficking, immigration, food,
+                economicjustice, education, environment, gayrights,<br />health,
+                humanrights, humantrafficking, immigration, food,<br />
                 womensrights</code>
             </td>
         </tr>
