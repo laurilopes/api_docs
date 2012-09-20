@@ -9,12 +9,3 @@ to a petition).
 ## Obtain an API Key and Secret Token
 
 Click on Request an API Key to get started.
-
-## Rate Limits
-
-A maximum of 50,000 requests per day using the same API key are allowed. A
-maximum of 10,000 requests per day using the same petition authorization key are
-allowed.
-
-Upon special request and coordination with Change.org, these limits may be
-lifted.
