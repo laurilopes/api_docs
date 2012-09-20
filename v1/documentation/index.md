@@ -1,6 +1,5 @@
 **[Getting Started](getting_started.md)**
 * Obtain an API Key and Secret Token
-* Rate Limits
 
 **[Requests](requests.md)**
 * Content Type
@@ -8,6 +7,7 @@
 * Timestamp
 * Endpoint
 * Request Signature
+* Rate Limits
 
 **[Responses](responses.md)**
 * Response Codes
