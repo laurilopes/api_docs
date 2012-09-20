@@ -228,7 +228,14 @@ petition target, URL to the petition image (if available), and signature count.
             </td>
         </tr>
         <tr>
-            <td><code>end_date</code></td>
+            <td><code>created_at</code></td>
+            <td><code>string</code> of ISO-8601 datetime</td>
+            <td>
+                The date and time the petition was created.
+            </td>
+        </tr>
+        <tr>
+            <td><code>end_at</code></td>
             <td><code>string</code> of ISO-8601 datetime</td>
             <td>
                 <em>(If available)</em> The deadline for the petition.
