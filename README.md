@@ -1,7 +1,7 @@
-# WARNING
+# We're in beta!
 
-Our API is not quite ready for public consumption. Please do not consider these
-definitive and ready for use until this note has been removed.
+Look out for more information soon about how to obtain an API key and secret
+token to start using our API.
 
 # Change.org Developer Documents
 
