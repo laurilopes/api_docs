@@ -3,8 +3,8 @@
 ## Users
 
 * [`GET users/:user_id`](#get-users-user_id)
-* [`GET users/:user_id/created_petitions`](#get-users-user_id-created_petitions)
-* [`GET users/:user_id/signed_petitions`](#get-users-user_id-signed_petitions)
+* [`GET users/:user_id/petitions`](#get-users-user_id-petitions)
+* [`GET users/:user_id/signatures/petitions`](#get-users-user_id-signatures-petitions)
 * [`GET users/get_id`](#get-users-get_id)
 
 <a name="get-users-user_id"></a>
@@ -104,8 +104,8 @@ Example:
             "country_code", "RU"
         }
 
-<a name="get-users-user_id-created_petitions"></a>
-### `GET users/:user_id/created_petitions`
+<a name="get-users-user_id-petitions"></a>
+### `GET users/:user_id/petitions`
 
 Returns the array of petitions that were created by the specified user.
 For more information about the petition information returned, see
@@ -223,8 +223,8 @@ _[Petitions](petitions.md)_.
     </tbody>
 </table>
 
-<a name="get-users-user_id-signed_petitions"></a>
-### `GET users/:user_id/signed_petitions`
+<a name="get-users-user_id-signatures-petitions"></a>
+### `GET users/:user_id/signatures/petitions`
 
 Returns the array of petitions that were signed by the specified user.
 Signatures that are hidden by the user will not be returned. For more
