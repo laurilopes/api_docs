@@ -132,13 +132,6 @@ The `updates` array contains objects with the following data:
             </td>
         </tr>
         <tr>
-            <td><code>link</code></td>
-            <td><code>string</code></td>
-            <td>
-                <em>(If available)</em> A URL included in the update.
-            </td>
-        </tr>
-        <tr>
             <td><code>author_name</code></td>
             <td><code>string</code></td>
             <td>
@@ -167,7 +160,6 @@ Example:
             "updates":[{
                 "created_on": "2012-03-14T03:32:39Z",
                 "content": "We hit 2,000 signatures!",
-                "link": "",
                 "author_name": "Jean-Luc Picard",
                 "author_url": "http://www.change.org/members/233311"
             },
