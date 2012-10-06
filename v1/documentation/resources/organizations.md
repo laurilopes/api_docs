@@ -194,6 +194,18 @@ _[Petitions](petitions.md)_.
                 If omitted, returns the first page by default.
             </td>
         </tr>
+        <tr>
+            <td><code>sort</code></td>
+            <td><code>string</code></td>
+            <td>
+                <em>(Optional)</em> The order by which petitions will be returned.
+                Accepted values are the number of signatures,
+                <code>signatures_asc</code> or <code>signatures_desc</code>, or
+                the date and time the petition was created,
+                <code>time_asc</code> or <code>time_desc</code>. If omitted,
+                returns petitions in the ascending order in which they were created.
+            </td>
+        </tr>
     </tbody>
 </table>
 
