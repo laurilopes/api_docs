@@ -62,6 +62,18 @@ array of IDs.
                 If omitted, returns the first page by default.
             </td>
         </tr>
+        <tr>
+            <td><code>sort</code></td>
+            <td><code>string</code></td>
+            <td>
+                <em>(Optional)</em>The order by which petitions will be returned.
+                Accepted values are for the number of signatures,
+                <code>signatures_asc</code> or <code>signatures_desc</code>, or
+                the date and time the petition was created,
+                <code>time_asc</code> or <code>time_desc</code>. If omitted,
+                returns petitions in the ascending order in which they were created.
+            </td>
+        </tr>
     </tbody>
 </table>
 
@@ -195,9 +207,19 @@ petition target, URL to the petition image (if available), and signature count.
             </td>
         </tr>
         <tr>
-            <td><code>letter</code></td>
+            <td><code>letter_subject</code></td>
             <td><code>string</code></td>
-            <td>The petition letter to the target(s).</td>
+            <td>The subject line of the petition letter to the target(s).</td>
+        </tr>
+        <tr>
+            <td><code>letter_salutation</code></td>
+            <td><code>string</code></td>
+            <td>The salutation of the petition letter to the target(s).</td>
+        </tr>
+        <tr>
+            <td><code>letter_body</code></td>
+            <td><code>string</code></td>
+            <td>The body content of the petition letter to the target(s).</td>
         </tr>
         <tr>
             <td><code>signature_count</code></td>
@@ -301,8 +323,7 @@ Example:
 
 Returns the unique Change.org ID for the petition specified by
 <code>petition_url</code>. Before performing requests on a petition, the
-unique Change.org ID is required. Obtaining the ID versus using the URL as an
-identifier is required because petition URLs can change.
+unique Change.org ID is required because petition URLs can change.
 
 #### Request Parameters
 
@@ -349,6 +370,7 @@ Example:
     GET https://api.change.org/v1/petitions/get_id?petition_url=http%3A%2F%2Fwww.change.org%2Fpetitions%2Fask-starfleet-to-add-a-purple-uniform
     => { "petition_id": 949821 }
 
-
-_A public API key, timestamp, and request signature are required parameters on
-all requests, implicit in the tables and examples above._
+_Note: A public API key is a required parameter on all requests, and a
+timestamp, endpoint, and request signature are required on certain requests.
+For readability, these parameters have been omitted from the tables and
+examples above._

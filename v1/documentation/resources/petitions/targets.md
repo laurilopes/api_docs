@@ -82,3 +82,8 @@ Example:
             "type": "us_government",
             "target_area": "AL"
         }]
+
+_Note: A public API key is a required parameter on all requests, and a
+timestamp, endpoint, and request signature are required on certain requests.
+For readability, these parameters have been omitted from the tables and
+examples above._
