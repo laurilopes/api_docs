@@ -123,7 +123,7 @@ _[Petitions](petitions.md)_.
             <td><code>user_id</code></td>
             <td><code>int</code></td>
             <td>
-                The ID of the user whose petitions should be returned.
+                <em>(In URL)</em> The ID of the user whose petitions should be returned.
             </td>
         </tr>
         <tr>
@@ -255,7 +255,7 @@ _[Petitions](petitions.md)_.
             <td><code>user_id</code></td>
             <td><code>int</code></td>
             <td>
-                The ID of the user whose signed petitions should be returned.
+                <em>(In URL)</em> The ID of the user whose signed petitions should be returned.
             </td>
         </tr>
         <tr>

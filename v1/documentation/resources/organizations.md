@@ -160,7 +160,7 @@ _[Petitions](petitions.md)_.
             <td><code>organization_id</code></td>
             <td><code>int</code></td>
             <td>
-                The ID of the organizations whose petitions have been returned.
+                <em>(In URL)</em> The ID of the organizations whose petitions have been returned.
             </td>
         </tr>
         <tr>
@@ -292,7 +292,7 @@ resource, this ID is required because organization profile URLs can change.
             <td><code>organization_url</code></td>
             <td><code>string</code></td>
             <td>
-                The organization whose ID will be retrieved.
+                The URL to the organization's Change.org profile.
             </td>
         </tr>
     </tbody>
