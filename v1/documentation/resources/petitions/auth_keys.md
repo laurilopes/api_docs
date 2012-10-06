@@ -157,6 +157,7 @@ would receive this request:
         "auth_key": "29b109add0012f47754a28309b670a2c"
     }
 
-_Note: A public API key, timestamp, endpoint, and request signature are
-required parameters on all requests, and have been omitted from the tables
-and examples above._
+_Note: A public API key is a required parameter on all requests, and a
+timestamp, endpoint, and request signature are required on certain requests.
+For readability, these parameters have been omitted from the tables and
+examples above._

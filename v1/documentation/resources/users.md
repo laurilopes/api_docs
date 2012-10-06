@@ -396,6 +396,7 @@ Example:
     GET https://api.change.org/v1/users/get_id?user_url=http%3A%2F%2Fwww.change.org%2Fmembers%2Fpavelchekov
     => { "user_id": 298374 }
 
-_Note: A public API key, timestamp, endpoint, and request signature are
-required parameters on all requests, and have been omitted from the tables
-and examples above._
+_Note: A public API key is a required parameter on all requests, and a
+timestamp, endpoint, and request signature are required on certain requests.
+For readability, these parameters have been omitted from the tables and
+examples above._
