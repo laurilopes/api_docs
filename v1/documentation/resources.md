@@ -6,3 +6,10 @@
 * [Reasons on Petitions](resources/petitions/reasons.md)
 * [Updates on Petitions](resources/petitions/updates.md)
 * [Authorization Keys on Petitions](resources/petitions/auth_keys.md)
+
+## [Users](resources/users.md)
+* [Created Petitions](resources/users.md#get-users-user_id-petitions)
+* [Signed Petitions](resources/users.md#get-users-user_id-signatures-petitions)
+
+## [Organizations](resources/organizations.md)
+* [Created Petitions](resources/organizations.md#get-organizations-organization_id-petitions)
