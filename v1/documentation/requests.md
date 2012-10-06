@@ -37,8 +37,8 @@ The parameters in each request must always be accompanied by an _API key_.
 Three additional parameters must be included on all requests that modify or
 update a resource: an _endpoint_, a _timestamp_, and a _request signature_.
 The request signature (detailed below) is generated
-by using the API user's _secret token_ and, in some cases, a
-_petition authorization key_.
+by using the API user's _secret token_ and a
+_resource authorization key_.
 
 ### API Key
 

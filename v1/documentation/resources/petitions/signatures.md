@@ -231,8 +231,8 @@ but will not return pagination information or endpoints.
 <a name="post-signatures"></a>
 ### `POST petitions/:petition_id/signatures`
 
-Adds a signature to a petition. A petition authorization key is required for
-this action.
+Adds a signature to a petition. **A request signature, is required for
+this request.**
 
 By adding signatures to a petition, the API user agrees to display the
 following text and links directly above or below the signature form:
