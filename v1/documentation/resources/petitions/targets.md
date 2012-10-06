@@ -31,6 +31,7 @@ An array of targets.
 <table>
     <thead>
         <th>Field Name</th>
+        <th>Type</th>
         <th>Description</th>
     </thead>
     <tbody>
