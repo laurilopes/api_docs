@@ -385,10 +385,10 @@ user profile URLs can change.
     </thead>
     <tbody>
         <tr>
-            <td><code>user_id</code></td>
+            <td><code>user_url</code></td>
             <td><code>string</code></td>
             <td>
-                The user whose ID will be retrieved.
+                The URL to the user's Change.org profile.
             </td>
         </tr>
     </tbody>
