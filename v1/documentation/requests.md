@@ -226,6 +226,11 @@ The following table summarizes the paramters required for requests:
     </tbody>
 </table>
 
+## JSON-P
+
+A `callback` parameter can be specified on any request and the resulting
+response will be wrapped in the specified callback method.
+
 ## Rate Limits
 
 A maximum of 50,000 requests per day using the same API key are allowed. A
