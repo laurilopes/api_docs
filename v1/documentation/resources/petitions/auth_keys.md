@@ -57,8 +57,8 @@ would most often be a reasonable source code (e.g. a specific YouTube video).
             <td><code>callback_endpoint</code></td>
             <td><code>string</code></td>
             <td>
-                The URL to which the petition authorization key or other 
-                information (outlined below) will be posted.
+                <em>(Optional)</em> The URL to which updated information (outlined below) will
+                be posted if the status of an authorization key changes.
             </td>
         </tr>
     </tbody>
@@ -66,16 +66,13 @@ would most often be a reasonable source code (e.g. a specific YouTube video).
 
 #### Response Data
 
-A 202 acknowledgement response is sent upon receipt of the request if no
-petition authorization key already exists for this resource and requestor. If it
-does, then a 200 response is sent with the authorization code that already
-exists or an indication that the request has been denied or that a
-previously-granted authorization code has been revoked.
+The following is the response data, including the newly-granted authorization
+key. If the status of an authorization key changes (e.g. if authorization has
+been revoked), this data will be posted to the URL specified
+by `callback_endpoint`, which was optionally submitted in the original request.
 
-The following is the data sent to the callback endpoint once the request has
-been processed. The originally fields submitted are posted to the callback
-endpoint to enable the user submitting the request to map the authorization back
-to its own user and resource (originally specified in `source`).
+An email is also sent to the email address specified by `requester_email`
+if an authrorization key's status changes.
 
 <table>
     <thead>
@@ -128,7 +125,7 @@ to its own user and resource (originally specified in `source`).
             <td><code>auth_key</code></td>
             <td><code>string</code></td>
             <td>
-                <em>(If granted or revoked)</em> The petition authorization key.
+                The petition authorization key.
             </td>
         </tr>
     </tbody>
@@ -144,12 +141,22 @@ Example:
         "callback_endpoint": "http://mywebsite.com/receive_auth_keys"
     }
 
-Results in a 202 acknowledgment response. Eventually, the callback endpoint
-would receive this request:
+The immediate response would be:
 
-    POST http://mywebsite.com/receive_auth_keys
     {
         "status": "granted",
+        "petition_id": "48503",
+        "source_description": "YouTube video",
+        "source": "http://www.youtube.com/watch?v=AayLwwvn77s",
+        "requester_email": "data@ent1701d.org",
+        "auth_key": "29b109add0012f47754a28309b670a2c"
+    }
+
+If the petition creator were to revoke the authorization key, the following
+would be posted to `http://mywebsite.com/receive_auth_keys`:
+
+    {
+        "status": "revoked",
         "petition_id": "48503",
         "source_description": "YouTube video",
         "source": "http://www.youtube.com/watch?v=AayLwwvn77s",
