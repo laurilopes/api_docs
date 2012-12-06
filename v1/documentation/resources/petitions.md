@@ -3,6 +3,7 @@
 ## Petitions
 
 * [`GET petitions`](#get-petitions)
+* [`GET petitions/featured`](#get-petitions-featured)
 * [`GET petitions/:petition_id`](#get-petitions-petition_id)
 * [`GET petitions/get_id`](#get-petitions-get_id)
 
@@ -124,7 +125,120 @@ array of IDs.
             <td><code>petitions</code></td>
             <td><code>array</code></td>
             <td>
-                The array of petitions (specified in <code>GET 
+                The array of petitions (specified in <code>GET
+                petitions/:petition_id</code>)
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<a name="get-petitions-featured"></a>
+### `GET petitions/featured`
+
+Returns an array of petition data objects that are the current featured petitions on the Change.org website.
+
+#### Request Parameters
+<table>
+    <thead>
+        <th>Parameter Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>fields</code></td>
+            <td><code>string</code> of comma-separated field names</td>
+            <td>
+                (Optional) The fields of the petition data object that will be
+                returned for each petition in the response. The parameter should include the
+                field names (described in
+                <code>GET petitions/:petition_id</code>), separated
+                by commas. Omitting this parameter will return all available
+                fields. <br />
+                <br />
+                Example: <code>"title,url,signature_count"</code>
+            </td>
+        </tr>
+        <tr>
+            <td><code>page_size</code></td>
+            <td><code>int</code></td>
+            <td>
+                (Optional) The maximum number of petition data objects to return
+                per request, no more than 500. If omitted, returns the maximum number of
+                petitions.
+            </td>
+        </tr>
+        <tr>
+            <td><code>page</code></td>
+            <td><code>int</code></td>
+            <td>
+                (Optional) The page offset by <code>page_size</code> petitions.
+                If omitted, returns the first page by default.
+            </td>
+        </tr>
+        <tr>
+            <td><code>sort</code></td>
+            <td><code>string</code></td>
+            <td>
+                <em>(Optional)</em> The order by which petitions will be returned.
+                Accepted values are the number of signatures,
+                <code>signatures_asc</code> or <code>signatures_desc</code>, or
+                the date and time the petition was created,
+                <code>time_asc</code> or <code>time_desc</code>. If omitted,
+                returns petitions in the ascending order in which they were created.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+#### Response Data
+<table>
+    <thead>
+        <th>Field Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>page</code></td>
+            <td><code>int</code></td>
+            <td>
+                The current page number. Will default to 1.
+            </td>
+        </tr>
+        <tr>
+            <td><code>prev_page_endpoint</code></td>
+            <td><code>string</code></td>
+            <td>
+                The API endpoint that can be called to retrieve the previous
+                page of featured petitions. <code>null</code> if there is no previous
+                page.
+            </td>
+        </tr>
+        <tr>
+            <td><code>next_page_endpoint</code></td>
+            <td><code>string</code></td>
+            <td>The API endpoint that can be called to retrieve the next page of
+            featured petitions. <code>null</code> if there is no next page.</td>
+        </tr>
+        <tr>
+            <td><code>page</code></td>
+            <td><code>int</code></td>
+            <td>
+                The current page number.
+            </td>
+        </tr>
+        <tr>
+            <td><code>total_pages</code></td>
+            <td><code>int</code></td>
+            <td>The total number of pages of featured petitions (of size specified by
+            <code>page_size</code>)</td>
+        </tr>
+        <tr>
+            <td><code>petitions</code></td>
+            <td><code>array</code></td>
+            <td>
+                The array of featured petitions (specified in <code>GET
                 petitions/:petition_id</code>)
             </td>
         </tr>
@@ -308,7 +422,7 @@ Example:
                 "type": "us_government",
             }],
             "letter": "Dear Congress,
-                
+
                 Please build the USS Enterprise as quickly as possible.
 
                 Thank you.",
