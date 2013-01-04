@@ -164,7 +164,7 @@ Returns an array of petition data objects that are the current featured petition
             <td><code>int</code></td>
             <td>
                 (Optional) The maximum number of petition data objects to return
-                per request, no more than 500. If omitted, returns the maximum number of
+                per request, no more than 25. If omitted, returns the maximum number of
                 petitions.
             </td>
         </tr>
