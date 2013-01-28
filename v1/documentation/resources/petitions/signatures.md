@@ -133,6 +133,13 @@ The signatures array contains objects with the following data:
             </td>
         </tr>
         <tr>
+            <td><code>email</code></td>
+            <td><code>string</code></td>
+            <td>
+                <em>(If authorized, see</em> Signer Email Addresses<em>)</em> Email address of the signer.
+            </td>
+        </tr>
+        <tr>
             <td><code>city</code></td>
             <td><code>string</code></td>
             <td>
@@ -144,6 +151,13 @@ The signatures array contains objects with the following data:
             <td><code>string</code></td>
             <td>
                 <em>(If available)</em> The standard abbreviation of the state or province of the signer.
+            </td>
+        </tr>
+        <tr>
+            <td><code>postal_code</code></td>
+            <td><code>string</code></td>
+            <td>
+                <em>(If available)</em> The country-specific postal code of the signer.
             </td>
         </tr>
         <tr>
@@ -182,7 +196,7 @@ Example:
         "signatures": [{
                 "name": "Jean-Luc Picard",
                 "city": "La Barre",
-                "state_province": "",
+                "postal_code": "2910",
                 "country_code": "FR",
                 "country_name": "France",
                 "signed_on": "2012-02-15T23:39:31Z"
@@ -196,6 +210,13 @@ Example:
                 "signed_on": "2012-02-14T10:02:23Z"
             }]
         }
+
+##### Signer Email Addresses
+
+The email addresses of petition signers are *not* publicly available to API
+users, except in cases when the API user making the request is the organization
+that created the relevant petition and users have opted in to share their
+information with that organization.
 
 <a name="get-signatures-recent"></a>
 ### `GET petitions/:petition_id/signatures/recent`
