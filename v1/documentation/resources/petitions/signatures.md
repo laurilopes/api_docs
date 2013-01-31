@@ -181,6 +181,13 @@ The signatures array contains objects with the following data:
                 Date and time of the signature.
             </td>
         </tr>
+        <tr>
+            <td><code>public</code></td>
+            <td><code>boolean</code></td>
+            <td>
+                <em>(If authorized)</em> Shows whether the signature is public or private.  Non-petition owners only see public signatures.
+            </td>
+        </tr>
     </tbody>
 </table>
 
