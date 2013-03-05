@@ -43,7 +43,8 @@ The following HTTP status codes are possible in response to a request:
             <td>403</td>
             <td>Forbidden</td>
             <td>The request included an API key, secret, or a petition
-                authorization key that has been revoked.</td>
+                authorization key that has been revoked, or was submitted
+                for an existing Change.org user that is locked.</td>
         </tr>
         <tr>
             <td>404</td>
