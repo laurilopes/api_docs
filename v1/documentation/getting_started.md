@@ -8,4 +8,5 @@ to a petition).
 
 ## Obtain an API Key and Secret Token
 
-Click on Request an API Key to get started.
+Visit [the Change.org developer area](https://www.change.org/developers/api-key) to obtain
+an API key and secret token.
