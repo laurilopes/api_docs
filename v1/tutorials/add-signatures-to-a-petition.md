@@ -1,6 +1,6 @@
 # Tutorials
 
-## A Basic Request
+## Add a signature to a petition
 
 In this example, we will add signatures to a petition with PHP using the 
 `GET petitions/:petition_id/signatures` request.
