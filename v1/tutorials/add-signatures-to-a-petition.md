@@ -32,7 +32,7 @@ to add signatures, declare it:
     $petition_auth_key = 'my_petition_auth_key';
 
 You'll also need to specify the petition by ID. (See  
-(A Basic Request)[a-basic-request.md] on how to obtain a petition's
+[A Basic Request](a-basic-request.md) on how to obtain a petition's
 unique Change.org ID.)
 
     $petition_id = 12345;
