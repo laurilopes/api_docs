@@ -157,7 +157,7 @@ The signatures array contains objects with the following data:
             <td><code>postal_code</code></td>
             <td><code>string</code></td>
             <td>
-                <em>(If available)</em> The country-specific postal code of the signer.
+                <em>(If authorized, see</em> Signer Email Addresses<em>)</em> The country-specific postal code of the signer.
             </td>
         </tr>
         <tr>
@@ -185,7 +185,7 @@ The signatures array contains objects with the following data:
             <td><code>public</code></td>
             <td><code>boolean</code></td>
             <td>
-                <em>(If authorized)</em> Shows whether the signature is public or private.  Non-petition owners only see public signatures.
+                <em>(If authorized, see</em> Signer Email Addresses<em>)</em> Shows whether the signature is public or private.  Non-petition owners only see public signatures.
             </td>
         </tr>
     </tbody>
