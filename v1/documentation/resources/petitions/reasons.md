@@ -28,7 +28,7 @@ Returns the reasons given by signers of a petition for having signed.
             <td><code>int</code></td>
             <td>
                 <em>(Optional)</em>The maximum number of reasons to return per 
-                request, but no more than 100. If omitted, returns a maximum of 10 reasons.
+                request, but no more than 500. If omitted, returns a maximum of 10 reasons.
             </td>
         </tr>
         <tr>

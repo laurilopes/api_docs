@@ -32,7 +32,7 @@ Returns signatures on a petition.
             <td><code>int</code></td>
             <td>
                 <em>(Optional)</em> The maximum number of signatures to return
-                per request, but no more than 100. If omitted, returns a maximum of 10
+                per request, but no more than 500. If omitted, returns a maximum of 10
                 signatures.
             </td>
         </tr>
