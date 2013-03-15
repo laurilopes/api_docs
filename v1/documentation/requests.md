@@ -233,9 +233,7 @@ response will be wrapped in the specified callback method.
 
 ## Rate Limits
 
-A maximum of 50,000 requests per day using the same API key are allowed. A
-maximum of 10,000 requests per day using the same petition authorization key are
-allowed.
-
-Upon special request and coordination with Change.org, these limits may be
-lifted.
+In rare circumstances, during peak usage, Change.org may be required to impose
+a modest limit on the number of requests submitted by an individual API user
+(a developer). In such a case, Change.org will make an effort to contact the
+API user before doing so.
