@@ -299,7 +299,7 @@ following text and links directly above or below the signature form:
             <td><code>address</code></td>
             <td><code>string</code></td>
             <td>
-                Residential address of the signer.
+                <em>(Optional)</em> Residential address of the signer.
             </td>
         </tr>
         <tr>
@@ -313,7 +313,7 @@ following text and links directly above or below the signature form:
             <td><code>state_province</code></td>
             <td><code>string</code></td>
             <td>
-                The standard abbreviation for the signer's state or province.
+                <em>(Optional)</em> The standard abbreviation for the signer's state or province.
             </td>
         </tr>
         <tr>
