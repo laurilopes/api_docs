@@ -207,11 +207,6 @@ petition target, URL to the petition image (if available), and signature count.
             </td>
         </tr>
         <tr>
-            <td><code>letter_subject</code></td>
-            <td><code>string</code></td>
-            <td>The subject line of the petition letter to the target(s).</td>
-        </tr>
-        <tr>
             <td><code>letter_salutation</code></td>
             <td><code>string</code></td>
             <td>The salutation of the petition letter to the target(s).</td>
