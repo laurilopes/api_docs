@@ -124,7 +124,7 @@ array of IDs.
             <td><code>petitions</code></td>
             <td><code>array</code></td>
             <td>
-                The array of petitions (specified in <code>GET 
+                The array of petitions (specified in <code>GET
                 petitions/:petition_id</code>)
             </td>
         </tr>
@@ -298,7 +298,7 @@ Example:
                 "type": "us_government",
             }],
             "letter": "Dear Congress,
-                
+
                 Please build the USS Enterprise as quickly as possible.
 
                 Thank you.",
