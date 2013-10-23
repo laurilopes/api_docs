@@ -269,7 +269,7 @@ following text and links directly above or below the signature form:
             <td><code>source</code></td>
             <td><code>string</code></td>
             <td>
-                The source code originally submitted to request the
+                The source URL originally submitted to request the
                 authorization key. (See <em><a href="auth_keys.md">Authorization
                 Keys on Petitions</a></em>.)
             </td>
