@@ -32,5 +32,8 @@
   ));
 
   $result = curl_exec($curl_session);
-  echo $result;
+  $result = curl_exec($curl_session);
+  $json_response = json_decode($result, true);
+  print_r($json_response);
+
 ?>
