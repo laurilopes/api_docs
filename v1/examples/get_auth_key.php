@@ -28,6 +28,7 @@
     CURLOPT_POST => 1,
     CURLOPT_URL => $request_url,
     CURLOPT_POSTFIELDS => $query,
+    CURLOPT_RETURNTRANSFER => true
   ));
 
   $result = curl_exec($curl_session);
