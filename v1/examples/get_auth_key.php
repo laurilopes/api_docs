@@ -28,8 +28,12 @@
     CURLOPT_POST => 1,
     CURLOPT_URL => $request_url,
     CURLOPT_POSTFIELDS => $query,
+    CURLOPT_RETURNTRANSFER => true
   ));
 
   $result = curl_exec($curl_session);
-  echo $result;
+  $result = curl_exec($curl_session);
+  $json_response = json_decode($result, true);
+  print_r($json_response);
+
 ?>
