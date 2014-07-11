@@ -161,7 +161,7 @@ The signatures array contains objects with the following data:
             </td>
         </tr>
         <tr>
-            <td><code>signed_on</code></td>
+            <td><code>signed_at</code></td>
             <td><code>string</code> of ISO-8601 datetime</td>
             <td>
                 Date and time of the signature.
@@ -185,7 +185,7 @@ Example:
                 "state_province": "",
                 "country_code": "FR",
                 "country_name": "France",
-                "signed_on": "2012-02-15T23:39:31Z"
+                "signed_at": "2012-02-15T23:39:31Z"
             },
             {
                 "name": "William Riker",
@@ -193,7 +193,7 @@ Example:
                 "state_province": "CA",
                 "country_code": "US",
                 "country_name": "United States",
-                "signed_on": "2012-02-14T10:02:23Z"
+                "signed_at": "2012-02-14T10:02:23Z"
             }]
         }
 
