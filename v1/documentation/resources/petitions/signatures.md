@@ -189,8 +189,8 @@ Example:
             },
             {
                 "name": "William Riker",
-                "city": "San Francisco",
-                "state_province": "CA",
+                "city": "Valdez",
+                "state_province": "AK",
                 "country_code": "US",
                 "country_name": "United States",
                 "signed_at": "2012-02-14T10:02:23Z"
