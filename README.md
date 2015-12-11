@@ -1,8 +1,6 @@
 # Change.org Developer Documents
 
-We're in beta! Visit
-[change.org/developers](https://www.change.org/developers) for more
-information and to obtain an API key and secret token.
+This version of the Change.org API has been retired. While endpoints should continue to work as documented, we will no longer be providing support or bug fixes.
 
 * [Documentation](https://github.com/change/api_docs/blob/master/v1/documentation/index.md)
 * [Tutorials](https://github.com/change/api_docs/blob/master/v1/tutorials/index.md)
