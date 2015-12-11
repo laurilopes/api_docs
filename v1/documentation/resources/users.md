@@ -4,7 +4,7 @@
 
 * [`GET users/:user_id`](#get-users-user_id)
 * [`GET users/:user_id/petitions`](#get-users-user_id-petitions)
-* [`GET users/:user_id/signatures/petitions`](#get-users-user_id-signatures-petitions)
+* [`GET users/:user_id/signatures/petitions`](#get-users-user_id-signatures-petitions) (Deprecated)
 * [`GET users/get_id`](#get-users-get_id)
 
 <a name="get-users-user_id"></a>
@@ -236,136 +236,7 @@ _[Petitions](petitions.md)_.
 </table>
 
 <a name="get-users-user_id-signatures-petitions"></a>
-### `GET users/:user_id/signatures/petitions`
-
-Returns the array of petitions that were signed by the specified user.
-Signatures that are hidden by the user will not be returned. For more
-information about the petition information returned, see
-_[Petitions](petitions.md)_.
-
-#### Request Parameters
-<table>
-    <thead>
-        <th>Parameter Name</th>
-        <th>Type</th>
-        <th>Description</th>
-    </thead>
-    <tbody>
-        <tr>
-            <td><code>user_id</code></td>
-            <td><code>int</code></td>
-            <td>
-                <em>(In URL)</em> The ID of the user whose signed petitions should be returned.
-            </td>
-        </tr>
-        <tr>
-            <td><code>fields</code></td>
-            <td><code>string</code> of comma-separated field names</td>
-            <td>
-                (Optional) The fields of the petition data objects that will be
-                returned for each petition in the response. The parameter should include the
-                field names (described in
-                <code>GET petitions/:petition_id</code>), separated
-                by commas. Omitting this parameter will return all available
-                fields. <br />
-                <br />
-                Example: <code>"title,url,signature_count"</code>
-            </td>
-        </tr>
-        <tr>
-            <td><code>page_size</code></td>
-            <td><code>int</code></td>
-            <td>
-                (Optional) The maximum number of petition data objects to return
-                per request, no more than 500. If omitted, returns the maximum number of
-                petitions.
-            </td>
-        </tr>
-        <tr>
-            <td><code>page</code></td>
-            <td><code>int</code></td>
-            <td>
-                (Optional) The page offset by <code>page_size</code> petitions.
-                If omitted, returns the first page by default.
-            </td>
-        </tr>
-        <tr>
-            <td><code>sort</code></td>
-            <td><code>string</code></td>
-            <td>
-                <em>(Optional)</em> The order by which petitions will be returned.
-                Accepted values are the number of signatures,
-                <code>signatures_asc</code> or <code>signatures_desc</code>, or
-                the date and time the petition was created,
-                <code>time_asc</code> or <code>time_desc</code>. If omitted,
-                returns petitions in the ascending order in which they were created.
-            </td>
-        </tr>
-    </tbody>
-    </tbody>
-</table>
-
-#### Response Data
-
-<table>
-    <thead>
-        <th>Field Name</th>
-        <th>Type</th>
-        <th>Description</th>
-    </thead>
-    <tbody>
-        <tr>
-            <td><code>user_id</code></td>
-            <td><code>int</code></td>
-            <td>
-                The ID of the user whose signed petitions have been returned.
-            </td>
-        </tr>
-        <tr>
-            <td><code>page</code></td>
-            <td><code>int</code></td>
-            <td>
-                The current page number. Defaults to 1.
-            </td>
-        </tr>
-        <tr>
-            <td><code>prev_page_endpoint</code></td>
-            <td><code>string</code></td>
-            <td>
-                The API endpoint that can be called to retrieve the previous
-                page of petitions. <code>null</code> if there is no previous
-                page.
-            </td>
-        </tr>
-        <tr>
-            <td><code>next_page_endpoint</code></td>
-            <td><code>string</code></td>
-            <td>The API endpoint that can be called to retrieve the next page of
-            petitions. <code>null</code> if there is no next page.</td>
-        </tr>
-        <tr>
-            <td><code>page</code></td>
-            <td><code>int</code></td>
-            <td>
-                The current page number.
-            </td>
-        </tr>
-        <tr>
-            <td><code>total_pages</code></td>
-            <td><code>int</code></td>
-            <td>The total number of pages of petitions (of size specified by
-            <code>page_size</code>)</td>
-        </tr>
-        <tr>
-            <td><code>petitions</code></td>
-            <td><code>array</code> of petitions created by the specified user</td>
-            <td>
-                See <em><a href="petitions.md">Petitions</a></em>
-                for more information about petition data objects.
-            </td>
-        </tr>
-    </tbody>
-</table>
+### `GET users/:user_id/signatures/petitions` (Deprecated)
 
 <a name="get-users-get_id"></a>
 ### `GET users/get_id`
